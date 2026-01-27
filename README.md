@@ -146,7 +146,7 @@ This project follows a **Trunk Base Development Branching Model**. This strategy
 ## Acknowledgments
 * Mr. Danny Cheng, Professor
 
-<p align="right">(<a href="readme-top">Back To Top</a>)</p>
+<p align="right">(<a href="#readme-top">Back To Top</a>)</p>
 
 
 <!--- button image url & destination url --->

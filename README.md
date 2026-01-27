@@ -67,7 +67,7 @@ Make sure you have configured your git version control system properly. Please c
 
 <!-- Commit and Pull Request Protocols-->
 ### Commit and Pull Request Protocols
-[![Trunk Base Development][trunkBase-shield]][trunkBase-url]
+[![Trunk Base Development][trunkBase-button]][trunkBase-url]
 This project follows a **Trunk Base Development Branching Model**. This strategy uses the main branch as mainline development it is where all developers commit. In this model developers usually clone branches and make changes locally so push them to the mainline (bugfix, feature, etc...). In trunk-based development, the trunk is the central branch (main branch) to which all developers send their code changes. See more [here](https://filipemotta.medium.com/branches-strategies-an-overview-d331c470ec53)
 
 **_Important:_ No commits and pushes are allowed in the main branch.**
@@ -170,3 +170,6 @@ This project follows a **Trunk Base Development Branching Model**. This strategy
 
 [JavaScript-button]: https://img.shields.io/badge/JavaScript-%23FF7800?style=for-the-badge&logo=javascript
 [JavaScript=docu]: https://www.w3schools.com/jsrEF/default.asp
+
+[trunkBase-button]: https://miro.medium.com/v2/resize:fit:1100/format:webp/0*W-GlxosBTAMcvg2V.png
+[trunkBase-url]: https://filipemotta.medium.com/branches-strategies-an-overview-d331c470ec53

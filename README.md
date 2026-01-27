@@ -137,6 +137,15 @@ This project follows a **Trunk Base Development Branching Model**. This strategy
   git branch origin --delete <##/type/branchName>
   ```
 
+## Developer Emails
+* Joramm Dela Torre - [joramm_delatorre@dlsu.edu.ph](joramm_delatorre@dlsu.edu.ph)
+* Jensel Espada - [jensel_john_l_espada@dlsu.edu.ph](jensel_john_l_espada@dlsu.edu.ph)
+* Kurt Laguerta - [kurt_laguerta@dlsu.edu.ph](kurt_laguerta@dlsu.edu.ph)
+* Kei Saguin - [vl_saguin@dlsu.edu.ph](vl_saguin@dlsu.edu.ph)
+
+## Acknowledgments
+* Mr. Danny Cheng, Professor
+
 <p align="right">(<a href="readme-top">Back To Top</a>)</p>
 
 

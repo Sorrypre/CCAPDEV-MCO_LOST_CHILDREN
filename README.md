@@ -63,7 +63,7 @@ Make sure you have configured your git version control system properly. Please c
 6.  Type `ls` on the terminal to verify the you have the local copy of the remote repository.
 7.  Use `git status` to list all new or modified files that haven't yet been committed.
 
-<p align="right">(<a href="readme-top">Back To Top</a>)</p>
+<p align="right">(<a href="#readme-top">Back To Top</a>)</p>
 
 <!-- Commit and Pull Request Protocols-->
 ### Commit and Pull Request Protocols

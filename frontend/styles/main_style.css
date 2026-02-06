@@ -2,47 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+	Always provide sizes for md and xl unless masisira like .content-menu
+*/
+
+#page {
+	@apply bg-black flex flex-col gap-4 items-center;
+}
+
+#top {
+	@apply bg-zinc-600 pl-4 pr-4 w-full flex justify-between items-center;
+}
+
 .hamburger-icon {
-	@apply ml-4 invert w-12 h-12 md:w-28 md:h-28 xl:w-40 xl:h-40;
+	@apply invert w-12 h-12 md:w-28 md:h-28 xl:w-40 xl:h-40;
 }
 
 .profile-bubble {
-	@apply mr-4 xl:mr-12 w-16 h-16 md:w-28 md:h-28 xl:w-44 xl:h-44 rounded-full bg-white;
+	@apply w-16 h-16 md:w-24 md:h-24 xl:w-36 xl:h-36 rounded-full bg-white;
+}
+
+.trademark {
+	@apply flex flex-col items-center;
 }
 
 .landmass {
-	@apply font-bold text-white text-2xl md:text-5xl xl:text-8xl tracking-[0.2em] md:tracking-[0.4em];
+	@apply font-bold text-white text-2xl md:text-5xl xl:text-8xl tracking-[0.2em] md:tracking-[0.4em] after:content-['LANDMASS'];
 }
 
 .landmass-subtext {
-	@apply text-white text-xl md:text-2xl xl:text-5xl;
+	@apply text-white text-xl md:text-2xl xl:text-5xl after:content-['Reservation_System'];
 }
 
-.content-header {
-	@apply h-1/4 w-2/3 flex justify-center items-center;
+.dashboard-text {
+	@apply text-3xl md:text-8xl text-white font-bold justify-self-center after:content-['Dashboard'];
 }
 
-.content-header-text {
-	@apply font-bold text-white text-6xl md:text-8xl xl:text-9xl;
+#content {
+	@apply mt-10 flex flex-wrap gap-4;
 }
 
-.content-menu {
-	/* md:max-lg:w-[37.5%] breaks pages, remain at lg */
-	@apply h-3/4 w-2/3 lg:w-[37.5%] flex flex-col items-center gap-y-16 xl:gap-y-24 bg-gray-500 rounded-3xl;
+#content-menu-area {
+	@apply max-h-full p-4 flex flex-wrap justify-center items-center gap-12;
 }
 
-.dashboard-selection {
-	@apply w-3/4 ml-[12.5%] mr-[12.5%] bg-gray-200 rounded-full;
+.card {
+	@apply bg-gray-200 p-4 max-h-[600px] max-w-[400px] flex flex-col items-center;
 }
 
-.dashboard-selection-inner {
-	@apply m-4 flex items-center gap-x-4;
+.card-thumbnail {
+	@apply object-cover max-h-[300px] min-w-[200px];
 }
 
-.dashboard-selection-thumbnail {
-	@apply w-16 h-16 xl:w-24 xl:h-24 rounded-full bg-black;
+.card-header {
+	@apply font-bold text-4xl;
 }
 
-.dashboard-selection-text {
-	@apply text-lg md:text-2xl xl:text-4xl;
+.card-content-normal {
+	@apply text-justify text-sm md:text-base leading-normal line-clamp-6 min-h-[9em];
+}
+
+.card-content-long {
+	@apply text-justify text-xs md:text-sm leading-[2em] line-clamp-[8] min-h-[10.25em];
 }

@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.content-header {
+	@apply h-1/4 w-2/3 flex justify-center items-center;
+}
+
+.content-header-text {
+	@apply font-bold text-white text-7xl lg:text-8xl;
+}
+
+.content-menu {
+	@apply h-3/4 w-2/3 lg:w-[37.5%] flex flex-col items-center gap-y-16 bg-gray-500 rounded-3xl;
+}
+
+.dashboard-selection {
+	@apply w-3/4 ml-[12.5%] mr-[12.5%] bg-gray-200 rounded-full;
+}
+
+.dashboard-selection-inner {
+	@apply m-4 flex items-center gap-x-4;
+}
+
+.dashboard-selection-thumbnail {
+	@apply w-16 h-16 rounded-full bg-black;
+}
+
+.dashboard-selection-text {
+	@apply text-2xl lg:text-4xl;
+}

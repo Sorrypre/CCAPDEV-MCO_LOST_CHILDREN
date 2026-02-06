@@ -2,16 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+.hamburger-icon {
+	@apply ml-4 invert w-12 h-12 md:w-28 md:h-28 xl:w-40 xl:h-40;
+}
+
+.profile-bubble {
+	@apply mr-4 xl:mr-12 w-16 h-16 md:w-28 md:h-28 xl:w-44 xl:h-44 rounded-full bg-white;
+}
+
+.landmass {
+	@apply font-bold text-white text-2xl md:text-5xl xl:text-8xl tracking-[0.2em] md:tracking-[0.4em];
+}
+
+.landmass-subtext {
+	@apply text-white text-xl md:text-2xl xl:text-5xl;
+}
+
 .content-header {
 	@apply h-1/4 w-2/3 flex justify-center items-center;
 }
 
 .content-header-text {
-	@apply font-bold text-white text-7xl lg:text-8xl;
+	@apply font-bold text-white text-6xl md:text-8xl xl:text-9xl;
 }
 
 .content-menu {
-	@apply h-3/4 w-2/3 lg:w-[37.5%] flex flex-col items-center gap-y-16 bg-gray-500 rounded-3xl;
+	/* md:max-lg:w-[37.5%] breaks pages, remain at lg */
+	@apply h-3/4 w-2/3 lg:w-[37.5%] flex flex-col items-center gap-y-16 xl:gap-y-24 bg-gray-500 rounded-3xl;
 }
 
 .dashboard-selection {
@@ -23,9 +40,9 @@
 }
 
 .dashboard-selection-thumbnail {
-	@apply w-16 h-16 rounded-full bg-black;
+	@apply w-16 h-16 xl:w-24 xl:h-24 rounded-full bg-black;
 }
 
 .dashboard-selection-text {
-	@apply text-2xl lg:text-4xl;
+	@apply text-lg md:text-2xl xl:text-4xl;
 }

@@ -1,3 +1,4 @@
+@reference "tailwindcss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -75,11 +76,11 @@
 }
 
 .landmass {
-	@apply font-bold text-white text-2xl md:text-5xl xl:text-8xl tracking-[0.2em] md:tracking-[0.4em] after:content-['LANDMASS'];
+	@apply font-bold font-['Space_Grotesk'] text-white text-2xl md:text-5xl xl:text-8xl tracking-[0.2em] md:tracking-[0.4em] after:content-['LANDMASS'];
 }
 
 .landmass-subtext {
-	@apply text-white text-xl md:text-2xl xl:text-5xl after:content-['Reservation_System'];
+	@apply font-['Space_Mono'] text-white text-xl md:text-2xl xl:text-5xl after:content-['Reservation_System'];
 }
 
 /* DASHBOARD */
@@ -123,7 +124,7 @@
 /* LOGIN */
 
 #login {
-	@apply p-6 bg-gray-700 bg-opacity-40 max-w-[700px] rounded-2xl flex flex-wrap justify-center;
+	@apply p-6 bg-gray-700/40 max-w-[700px] rounded-2xl flex flex-wrap justify-center;
 }
 
 #login label {
@@ -155,11 +156,11 @@
 }
 
 .login-welcome {
-	@apply text-white font-bold text-[75px] after:content-['Welcome,_Captain!'];
+	@apply text-shadow-[5px_5px_2px_rgba(0,0,0,0.6)] text-shadow-black text-white font-bold text-[75px] after:content-['Welcome,_Captain!'];
 }
 
 .login-suspense {
-	@apply text-white text-[50px] after:content-['Ready_to_explore_the_labs?'];
+	@apply text-shadow-[5px_5px_2px_rgba(0,0,0,0.6)] text-shadow-black text-white text-[50px] after:content-['Ready_to_explore_the_labs?'];
 }
 
 /* BACKGROUNDS */

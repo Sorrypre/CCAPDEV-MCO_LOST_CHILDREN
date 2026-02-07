@@ -1031,10 +1031,16 @@ video {
 
 /* BACKGROUNDS */
 
+.bg-cover-no-repeat {
+  background-size: cover;
+}
+
 .login-background {
-  background-image: url('https://down-yuantu.pngtree.com/back_our/20241210/bg/4bc1a44f13507.png?e=1770467178&st=NWM5YTI5MmNjNWIzOTBmYzFmMjFiYWZkYzc2Y2Y1NDA&n=%E2%80%94Pngtree%E2%80%94a+striking+planet+and+the_16122702.png');
+  background-image: url('../assets/images/bg-login.png');
+  background-size: cover;
 }
 
 .dashboard-background {
-  background-image: url('https://down-yuantu.pngtree.com/ai/illus_our/20230618/21cf8c1802aecdb2b72339ca2a3f7eb5.jpg?e=1770467530&st=YTE5M2ZhMWI3ODdiNWViN2M1MTg5N2FkMTU5MmU2YjA&n=%E2%80%94Pngtree%E2%80%94vibrant+starry+night+sky+a_13317970.jpg');
+  background-image: url('../assets/images/bg-dashboard.jpg');
+  background-size: cover;
 }

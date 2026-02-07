@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-	Always provide sizes for md and xl unless masisira like .content-menu
-*/
+/* HEADER */
 
 #page {
 	@apply bg-black flex flex-col gap-4 items-center;
@@ -12,6 +10,10 @@
 
 #top {
 	@apply bg-zinc-600 pl-4 pr-4 w-full flex justify-between items-center;
+}
+
+.wrap-spacer {
+	@apply w-full;
 }
 
 .hamburger-icon {
@@ -34,6 +36,8 @@
 	@apply text-white text-xl md:text-2xl xl:text-5xl after:content-['Reservation_System'];
 }
 
+/* DASHBOARD */
+
 .dashboard-text {
 	@apply text-3xl md:text-8xl text-white font-bold justify-self-center after:content-['Dashboard'];
 }
@@ -43,25 +47,77 @@
 }
 
 #content-menu-area {
-	@apply max-h-full p-4 flex flex-wrap justify-center items-center gap-12;
+	@apply p-4 flex flex-wrap justify-center items-stretch gap-12;
 }
 
-.card {
-	@apply bg-gray-200 p-4 max-h-[600px] max-w-[400px] flex flex-col items-center;
+.dashboard-card {
+	@apply bg-gray-200 p-4 max-w-[400px] flex flex-col justify-start items-stretch gap-y-4;
 }
 
-.card-thumbnail {
-	@apply object-cover max-h-[300px] min-w-[200px];
+.dashboard-card-thumbnail-container {
+	@apply h-[300px] w-full flex justify-center items-center;
 }
 
-.card-header {
-	@apply font-bold text-4xl;
+.dashboard-card-thumbnail {
+	@apply object-cover max-h-[300px] max-w-[300px];
 }
 
-.card-content-normal {
-	@apply text-justify text-sm md:text-base leading-normal line-clamp-6 min-h-[9em];
+.dashboard-card-header {
+	@apply font-bold text-4xl text-center;
 }
 
-.card-content-long {
-	@apply text-justify text-xs md:text-sm leading-[2em] line-clamp-[8] min-h-[10.25em];
+.dashboard-card-content {
+	@apply text-justify text-xs md:text-base leading-[2em] md:leading-[1.5rem] min-h-[10.25em] md:min-h-[9em];
+}
+
+/* LOGIN */
+
+#login {
+	@apply p-6 bg-gray-700 bg-opacity-40 max-w-[700px] rounded-2xl flex flex-wrap justify-center;
+}
+
+#login label {
+	@apply w-full text-white text-[30px];
+}
+
+input {
+	@apply p-2 w-[30em] text-base md:max-lg:text-lg xl:text-xl rounded-2xl;
+}
+
+#login-submit-login {
+	@apply p-3 w-full bg-blue-700 text-[30px] text-white font-bold rounded-xl after:content-['Login'];
+}
+
+#login-register {
+	@apply p-3 w-full bg-gray-800 text-[30px] text-white rounded-xl after:content-['Register'];
+}
+
+.login-entry {
+	@apply max-w-[600px];
+}
+
+.login-buttons-area {
+	@apply p-5 w-full flex flex-col gap-y-2;
+}
+
+.login-intro {
+	@apply pt-6 flex flex-wrap justify-center items-center;
+}
+
+.login-welcome {
+	@apply text-white font-bold text-[75px] after:content-['Welcome,_Captain!'];
+}
+
+.login-suspense {
+	@apply text-white text-[50px] after:content-['Ready_to_explore_the_labs?'];
+}
+
+/* BACKGROUNDS */
+
+.login-background {
+	@apply bg-[url('https://down-yuantu.pngtree.com/back_our/20241210/bg/4bc1a44f13507.png?e=1770467178&st=NWM5YTI5MmNjNWIzOTBmYzFmMjFiYWZkYzc2Y2Y1NDA&n=%E2%80%94Pngtree%E2%80%94a+striking+planet+and+the_16122702.png')];
+}
+
+.dashboard-background {
+	@apply bg-[url('https://down-yuantu.pngtree.com/ai/illus_our/20230618/21cf8c1802aecdb2b72339ca2a3f7eb5.jpg?e=1770467530&st=YTE5M2ZhMWI3ODdiNWViN2M1MTg5N2FkMTU5MmU2YjA&n=%E2%80%94Pngtree%E2%80%94vibrant+starry+night+sky+a_13317970.jpg')];
 }

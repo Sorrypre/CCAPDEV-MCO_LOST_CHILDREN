@@ -606,6 +606,11 @@ video {
   border-width: 1px;
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
 .text-yellow-600 {
   --tw-text-opacity: 1;
   color: rgb(202 138 4 / var(--tw-text-opacity, 1));
@@ -620,9 +625,7 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-/*
-	Always provide sizes for md and xl unless masisira like .content-menu
-*/
+/* HEADER */
 
 #page {
   display: flex;
@@ -642,6 +645,10 @@ video {
   background-color: rgb(82 82 91 / var(--tw-bg-opacity, 1));
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.wrap-spacer {
+  width: 100%;
 }
 
 .hamburger-icon {
@@ -748,6 +755,8 @@ video {
   }
 }
 
+/* DASHBOARD */
+
 .dashboard-text {
   justify-self: center;
   font-size: 1.875rem;
@@ -778,62 +787,48 @@ video {
 
 #content-menu-area {
   display: flex;
-  max-height: 100%;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   gap: 3rem;
   padding: 1rem;
 }
 
-.card {
+.dashboard-card {
   display: flex;
-  max-height: 600px;
   max-width: 400px;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  justify-content: flex-start;
+  row-gap: 1rem;
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
   padding: 1rem;
 }
 
-.card-thumbnail {
+.dashboard-card-thumbnail-container {
+  display: flex;
+  height: 300px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-card-thumbnail {
   max-height: 300px;
-  min-width: 200px;
+  max-width: 300px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.card-header {
+.dashboard-card-header {
+  text-align: center;
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: 700;
 }
 
-.card-content-normal {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
-  min-height: 9em;
-  text-align: justify;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  line-height: 1.5;
-}
-
-@media (min-width: 768px) {
-  .card-content-normal {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-.card-content-long {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 8;
+.dashboard-card-content {
   min-height: 10.25em;
   text-align: justify;
   font-size: 0.75rem;
@@ -842,8 +837,139 @@ video {
 }
 
 @media (min-width: 768px) {
-  .card-content-long {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+  .dashboard-card-content {
+    min-height: 9em;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
+}
+
+/* LOGIN */
+
+#login {
+  display: flex;
+  max-width: 700px;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 1rem;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
+  --tw-bg-opacity: 0.4;
+  padding: 1.5rem;
+}
+
+#login label {
+  width: 100%;
+  font-size: 30px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+input {
+  width: 30em;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  @media not all and (min-width: 1024px) {
+    input {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  input {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+#login-submit-login {
+  width: 100%;
+  border-radius: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
+  padding: 0.75rem;
+  font-size: 30px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+#login-submit-login::after {
+  --tw-content: 'Login';
+  content: var(--tw-content);
+}
+
+#login-register {
+  width: 100%;
+  border-radius: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+  padding: 0.75rem;
+  font-size: 30px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+#login-register::after {
+  --tw-content: 'Register';
+  content: var(--tw-content);
+}
+
+.login-entry {
+  max-width: 600px;
+}
+
+.login-buttons-area {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  padding: 1.25rem;
+}
+
+.login-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+
+.login-welcome {
+  font-size: 75px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.login-welcome::after {
+  --tw-content: 'Welcome, Captain!';
+  content: var(--tw-content);
+}
+
+.login-suspense {
+  font-size: 50px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.login-suspense::after {
+  --tw-content: 'Ready to explore the labs?';
+  content: var(--tw-content);
+}
+
+/* BACKGROUNDS */
+
+.login-background {
+  background-image: url('https://down-yuantu.pngtree.com/back_our/20241210/bg/4bc1a44f13507.png?e=1770467178&st=NWM5YTI5MmNjNWIzOTBmYzFmMjFiYWZkYzc2Y2Y1NDA&n=%E2%80%94Pngtree%E2%80%94a+striking+planet+and+the_16122702.png');
+}
+
+.dashboard-background {
+  background-image: url('https://down-yuantu.pngtree.com/ai/illus_our/20230618/21cf8c1802aecdb2b72339ca2a3f7eb5.jpg?e=1770467530&st=YTE5M2ZhMWI3ODdiNWViN2M1MTg5N2FkMTU5MmU2YjA&n=%E2%80%94Pngtree%E2%80%94vibrant+starry+night+sky+a_13317970.jpg');
 }

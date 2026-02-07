@@ -554,6 +554,46 @@ video {
   display: none;
 }
 
+@font-face {
+  font-family: 'Space Grotesk';
+
+  src: url('../assets/fonts/space-grotesk.ttf') format('truetype');
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+
+  src: url('../assets/fonts/space-mono.ttf') format('truetype');
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+
+  src: url('../assets/fonts/inter.ttf') format('truetype');
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+
+  src: url('../assets/fonts/dm-sans.ttf') format('truetype');
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
 .visible {
   visibility: visible;
 }
@@ -645,6 +685,22 @@ video {
   background-color: rgb(82 82 91 / var(--tw-bg-opacity, 1));
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.cfont-grotesk {
+  font-family: 'Space Grotesk';
+}
+
+.cfont-mono {
+  font-family: 'Space Mono';
+}
+
+.cfont-inter {
+  font-family: 'Inter';
+}
+
+.cfont-dm-sans {
+  font-family: 'DM Sans';
 }
 
 .wrap-spacer {
@@ -757,8 +813,13 @@ video {
 
 /* DASHBOARD */
 
+#page.dashboard .dashboard-text, .dashboard-card p, .dashboard-card span {
+  font-family: 'Space Grotesk';
+}
+
 .dashboard-text {
   justify-self: center;
+  padding-top: 1.75rem;
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 700;
@@ -767,7 +828,7 @@ video {
 }
 
 .dashboard-text::after {
-  --tw-content: 'Dashboard';
+  --tw-content: 'EXPLORE';
   content: var(--tw-content);
 }
 
@@ -859,22 +920,24 @@ video {
 
 #login label {
   width: 100%;
+  font-family: 'Inter';
   font-size: 30px;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-input {
+#login input {
   width: 30em;
   border-radius: 1rem;
   padding: 0.5rem;
+  font-family: 'Space Mono';
   font-size: 1rem;
   line-height: 1.5rem;
 }
 
 @media (min-width: 768px) {
   @media not all and (min-width: 1024px) {
-    input {
+    #login input {
       font-size: 1.125rem;
       line-height: 1.75rem;
     }
@@ -882,7 +945,7 @@ input {
 }
 
 @media (min-width: 1280px) {
-  input {
+  #login input {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
@@ -894,6 +957,7 @@ input {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
   padding: 0.75rem;
+  font-family: 'DM Sans';
   font-size: 30px;
   font-weight: 700;
   --tw-text-opacity: 1;
@@ -911,6 +975,7 @@ input {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
   padding: 0.75rem;
+  font-family: 'DM Sans';
   font-size: 30px;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));

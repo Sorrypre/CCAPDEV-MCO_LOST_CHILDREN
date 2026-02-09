@@ -1,10 +1,7 @@
-@reference "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 #page.dashboard .dashboard-text, .dashboard-card p, .dashboard-card span {
-	@apply font-['Space_Grotesk']
+	@apply font-grotesk;
 }
 
 .dashboard-text {

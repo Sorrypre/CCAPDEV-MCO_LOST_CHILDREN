@@ -1,7 +1,4 @@
-@reference "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* LOGIN */
 
@@ -10,19 +7,19 @@
 }
 
 #login label {
-	@apply w-full text-white text-[30px] font-['Inter'];
+	@apply w-full text-white text-[30px] font-inter;
 }
 
 #login input {
-	@apply p-2 w-[30em] text-base md:max-lg:text-lg xl:text-xl font-['Space_Mono'] rounded-2xl;
+	@apply p-2 w-[30em] text-base md:max-lg:text-lg xl:text-xl font-smono rounded-2xl;
 }
 
 #login-submit-login {
-	@apply p-3 w-full bg-blue-700 text-[30px] text-white font-bold font-['DM_Sans'] rounded-xl after:content-['Login'];
+	@apply p-3 w-full bg-blue-700 text-[30px] text-white font-bold font-dmsans rounded-xl after:content-['Login'];
 }
 
 #login-register {
-	@apply p-3 w-full bg-gray-800 text-[30px] text-white font-['DM_Sans'] rounded-xl after:content-['Register'];
+	@apply p-3 w-full bg-gray-800 text-[30px] text-white font-dmsans rounded-xl after:content-['Register'];
 }
 
 .login-entry {

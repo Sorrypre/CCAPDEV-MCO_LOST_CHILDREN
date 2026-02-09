@@ -1,0 +1,46 @@
+@reference "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LOGIN */
+
+#login {
+	@apply p-6 bg-gray-700/40 max-w-[700px] rounded-2xl flex flex-wrap justify-center;
+}
+
+#login label {
+	@apply w-full text-white text-[30px] font-['Inter'];
+}
+
+#login input {
+	@apply p-2 w-[30em] text-base md:max-lg:text-lg xl:text-xl font-['Space_Mono'] rounded-2xl;
+}
+
+#login-submit-login {
+	@apply p-3 w-full bg-blue-700 text-[30px] text-white font-bold font-['DM_Sans'] rounded-xl after:content-['Login'];
+}
+
+#login-register {
+	@apply p-3 w-full bg-gray-800 text-[30px] text-white font-['DM_Sans'] rounded-xl after:content-['Register'];
+}
+
+.login-entry {
+	@apply max-w-[600px];
+}
+
+.login-buttons-area {
+	@apply p-5 w-full flex flex-col gap-y-2;
+}
+
+.login-intro {
+	@apply pt-6 flex flex-wrap justify-center items-center;
+}
+
+.login-welcome {
+	@apply text-shadow-[5px_5px_2px_rgba(0,0,0,0.6)] text-shadow-black text-white font-bold text-[75px] after:content-['Welcome,_Captain!'];
+}
+
+.login-suspense {
+	@apply text-shadow-[5px_5px_2px_rgba(0,0,0,0.6)] text-shadow-black text-white text-[50px] after:content-['Ready_to_explore_the_labs?'];
+}

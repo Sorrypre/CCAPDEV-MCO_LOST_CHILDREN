@@ -1,0 +1,98 @@
+@reference "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'Space Grotesk';
+		src: url('../assets/fonts/space-grotesk.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	@font-face {
+		font-family: 'Space Mono';
+		src: url('../assets/fonts/space-mono.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	@font-face {
+		font-family: 'Inter';
+		src: url('../assets/fonts/inter.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	@font-face {
+		font-family: 'DM Sans';
+		src: url('../assets/fonts/dm-sans.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+
+/* import stylesheets here */
+@import './login.css';
+@import './dashboard.css';
+
+/* BACKGROUNDS */
+
+.login-background {
+	@apply bg-cover bg-[url('../assets/images/bg-login.png')];
+}
+
+.dashboard-background {
+	@apply bg-cover bg-[url('../assets/images/bg-dashboard.jpg')];
+}
+
+/* GENERAL CONFIG */
+
+#page {
+	@apply m-0 bg-black flex flex-col gap-4 items-center;
+}
+
+#top {
+	@apply bg-zinc-600 w-full flex justify-between items-center;
+}
+
+.cfont-grotesk {
+	@apply font-['Space_Grotesk'];
+}
+
+.cfont-mono {
+	@apply font-['Space_Mono'];
+}
+
+.cfont-inter {
+	@apply font-['Inter'];
+}
+
+.cfont-dm-sans {
+	@apply font-['DM_Sans'];
+}
+
+.wrap-spacer {
+	@apply w-full;
+}
+
+.hamburger-icon {
+	@apply invert w-12 h-12 md:w-28 md:h-28 xl:w-40 xl:h-40;
+}
+
+.profile-bubble {
+	@apply w-16 h-16 md:w-24 md:h-24 xl:w-36 xl:h-36 rounded-full bg-white;
+}
+
+.trademark {
+	@apply flex flex-col items-center;
+}
+
+.landmass {
+	@apply font-bold font-['Space_Grotesk'] text-white text-2xl md:text-5xl xl:text-8xl tracking-[0.2em] md:tracking-[0.4em] after:content-['LANDMASS'];
+}
+
+.landmass-subtext {
+	@apply font-['Space_Mono'] text-white text-xl md:text-2xl xl:text-5xl after:content-['Reservation_System'];
+}

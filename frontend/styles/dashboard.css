@@ -1,0 +1,43 @@
+@reference "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#page.dashboard .dashboard-text, .dashboard-card p, .dashboard-card span {
+	@apply font-['Space_Grotesk']
+}
+
+.dashboard-text {
+	@apply pt-7 text-3xl md:text-8xl text-white font-bold justify-self-center after:content-['EXPLORE'];
+}
+
+#content {
+	@apply mt-10 flex flex-wrap gap-4;
+}
+
+#content-menu-area {
+	@apply p-4 flex flex-wrap justify-center items-stretch gap-12;
+}
+
+.dashboard-card {
+	@apply bg-gray-200 rounded-xl shadow-black p-4 max-w-[400px] flex flex-col justify-start items-center gap-y-4;
+	@apply transition duration-350 ease-out;
+	@apply hover:shadow-[12px_20px_25px_3px] hover:shadow-white/70;
+	@apply hover:cursor-pointer hover:bg-white hover:-translate-y-8 hover:-translate-x-3;
+}
+
+.dashboard-card-thumbnail-container {
+	@apply h-[200px] w-full flex justify-center items-center;
+}
+
+.dashboard-card-thumbnail {
+	@apply object-cover max-h-[200px] max-w-[200px];
+}
+
+.dashboard-card-header {
+	@apply font-bold text-4xl text-center;
+}
+
+.dashboard-card-content {
+	@apply text-justify text-xs md:text-base leading-[2em] md:leading-[1.5rem] min-h-[10.25em] md:min-h-[9em];
+}

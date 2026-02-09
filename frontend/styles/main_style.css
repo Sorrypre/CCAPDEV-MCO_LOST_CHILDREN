@@ -36,11 +36,11 @@
 /* HEADER */
 
 #page {
-	@apply bg-black flex flex-col gap-4 items-center;
+	@apply m-0 bg-black flex flex-col gap-4 items-center;
 }
 
 #top {
-	@apply bg-zinc-600 pl-4 pr-4 w-full flex justify-between items-center;
+	@apply bg-zinc-600 w-full flex justify-between items-center;
 }
 
 .cfont-grotesk {
@@ -102,15 +102,18 @@
 }
 
 .dashboard-card {
-	@apply bg-gray-200 p-4 max-w-[400px] flex flex-col justify-start items-stretch gap-y-4;
+	@apply bg-gray-200 rounded-xl shadow-black p-4 max-w-[400px] flex flex-col justify-start items-center gap-y-4;
+	@apply transition duration-350 ease-out;
+	@apply hover:shadow-[12px_20px_25px_3px] hover:shadow-white/70;
+	@apply hover:cursor-pointer hover:bg-white hover:-translate-y-8 hover:-translate-x-3;
 }
 
 .dashboard-card-thumbnail-container {
-	@apply h-[300px] w-full flex justify-center items-center;
+	@apply h-[200px] w-full flex justify-center items-center;
 }
 
 .dashboard-card-thumbnail {
-	@apply object-cover max-h-[300px] max-w-[300px];
+	@apply object-cover max-h-[200px] max-w-[200px];
 }
 
 .dashboard-card-header {
@@ -164,10 +167,6 @@
 }
 
 /* BACKGROUNDS */
-
-.bg-cover-no-repeat {
-	@apply bg-cover;
-}
 
 .login-background {
 	@apply bg-cover bg-[url('../assets/images/bg-login.png')];

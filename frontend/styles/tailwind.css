@@ -96,6 +96,7 @@
   }
 }
 #page {
+  margin: calc(var(--spacing, 0.25rem) * 0);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,8 +109,6 @@
   align-items: center;
   justify-content: space-between;
   background-color: var(--color-zinc-600, oklch(44.2% 0.017 285.786));
-  padding-right: calc(var(--spacing, 0.25rem) * 4);
-  padding-left: calc(var(--spacing, 0.25rem) * 4);
 }
 .cfont-grotesk {
   font-family: 'Space Grotesk';
@@ -249,22 +248,70 @@
   display: flex;
   max-width: 400px;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   justify-content: flex-start;
   row-gap: calc(var(--spacing, 0.25rem) * 4);
+  border-radius: var(--radius-xl, 0.75rem);
   background-color: var(--color-gray-200, oklch(92.8% 0.006 264.531));
   padding: calc(var(--spacing, 0.25rem) * 4);
+  --tw-shadow-color: #000;
+  @supports (color: color-mix(in lab, red, red)) {
+    --tw-shadow-color: color-mix(in oklab, var(--color-black, #000) var(--tw-shadow-alpha), transparent);
+  }
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function, cubic-bezier(0.4, 0, 0.2, 1)));
+  transition-duration: var(--tw-duration, var(--default-transition-duration, 150ms));
+  --tw-duration: 350ms;
+  transition-duration: 350ms;
+  --tw-ease: var(--ease-out, cubic-bezier(0, 0, 0.2, 1));
+  transition-timing-function: var(--ease-out, cubic-bezier(0, 0, 0.2, 1));
+  &:hover {
+    @media (hover: hover) {
+      --tw-shadow: 12px 20px 25px 3px var(--tw-shadow-color, currentcolor);
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      --tw-shadow-color: color-mix(in srgb, #fff 70%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-white, #fff) 70%, transparent) var(--tw-shadow-alpha), transparent);
+      }
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      --tw-translate-x: calc(var(--spacing, 0.25rem) * -3);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      --tw-translate-y: calc(var(--spacing, 0.25rem) * -8);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-white, #fff);
+    }
+  }
 }
 .dashboard-card-thumbnail-container {
   display: flex;
-  height: 300px;
+  height: 200px;
   width: 100%;
   align-items: center;
   justify-content: center;
 }
 .dashboard-card-thumbnail {
-  max-height: 300px;
-  max-width: 300px;
+  max-height: 200px;
+  max-width: 200px;
   object-fit: cover;
 }
 .dashboard-card-header {
@@ -402,9 +449,6 @@
     content: var(--tw-content);
   }
 }
-.bg-cover-no-repeat {
-  background-size: cover;
-}
 .login-background {
   background-image: url('../assets/images/bg-login.png');
   background-size: cover;
@@ -509,6 +553,94 @@
   initial-value: "";
   inherits: false;
 }
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ease {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -548,6 +680,25 @@
       --tw-font-weight: initial;
       --tw-tracking: initial;
       --tw-content: "";
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-duration: initial;
+      --tw-ease: initial;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-leading: initial;
       --tw-text-shadow-color: initial;
       --tw-text-shadow-alpha: 100%;

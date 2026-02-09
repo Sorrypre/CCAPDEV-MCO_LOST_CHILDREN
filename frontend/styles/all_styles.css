@@ -54,7 +54,7 @@
 }
 
 #top {
-	@apply bg-zinc-600 w-full flex justify-between items-center;
+	@apply max-h-[100px] bg-zinc-600 w-full flex justify-between items-center;
 }
 
 .cfont-grotesk {
@@ -78,11 +78,11 @@
 }
 
 .hamburger-icon {
-	@apply invert w-12 h-12 md:w-28 md:h-28 xl:w-40 xl:h-40;
+	@apply font-bold text-white text-4xl md:text-5xl xl:text-7xl after:content-['\2630'];
 }
 
 .profile-bubble {
-	@apply w-16 h-16 md:w-24 md:h-24 xl:w-36 xl:h-36 rounded-full bg-white;
+	@apply w-16 h-16 md:w-24 md:h-24 rounded-full bg-white;
 }
 
 .trademark {
@@ -90,9 +90,9 @@
 }
 
 .landmass {
-	@apply font-bold font-['Space_Grotesk'] text-white text-2xl md:text-5xl xl:text-8xl tracking-[0.2em] md:tracking-[0.4em] after:content-['LANDMASS'];
+	@apply font-bold font-['Space_Grotesk'] text-white text-2xl md:text-4xl xl:text-5xl tracking-[0.2em] md:tracking-[0.4em] after:content-['LANDMASS'];
 }
 
 .landmass-subtext {
-	@apply font-['Space_Mono'] text-white text-xl md:text-2xl xl:text-5xl after:content-['Reservation_System'];
+	@apply font-['Space_Mono'] text-white text-base md:text-xl xl:text-3xl after:content-['Reservation_System'];
 }

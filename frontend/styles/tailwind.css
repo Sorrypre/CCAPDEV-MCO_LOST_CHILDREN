@@ -687,6 +687,7 @@
 }
 #top {
   display: flex;
+  max-height: 100px;
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -708,21 +709,22 @@
   width: 100%;
 }
 .hamburger-icon {
-  height: calc(var(--spacing, 0.25rem) * 12);
-  width: calc(var(--spacing, 0.25rem) * 12);
-  --tw-invert: invert(100%);
-  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  @media (width >= 48rem) {
-    height: calc(var(--spacing, 0.25rem) * 28);
+  font-size: var(--text-4xl, 2.25rem);
+  line-height: var(--tw-leading, var(--text-4xl--line-height, calc(2.5 / 2.25)));
+  --tw-font-weight: var(--font-weight-bold, 700);
+  font-weight: var(--font-weight-bold, 700);
+  color: var(--color-white, #fff);
+  &::after {
+    --tw-content: '\2630';
+    content: var(--tw-content);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing, 0.25rem) * 28);
+    font-size: var(--text-5xl, 3rem);
+    line-height: var(--tw-leading, var(--text-5xl--line-height, 1));
   }
   @media (width >= 80rem) {
-    height: calc(var(--spacing, 0.25rem) * 40);
-  }
-  @media (width >= 80rem) {
-    width: calc(var(--spacing, 0.25rem) * 40);
+    font-size: var(--text-7xl, 4.5rem);
+    line-height: var(--tw-leading, var(--text-7xl--line-height, 1));
   }
 }
 .profile-bubble {
@@ -735,12 +737,6 @@
   }
   @media (width >= 48rem) {
     width: calc(var(--spacing, 0.25rem) * 24);
-  }
-  @media (width >= 80rem) {
-    height: calc(var(--spacing, 0.25rem) * 36);
-  }
-  @media (width >= 80rem) {
-    width: calc(var(--spacing, 0.25rem) * 36);
   }
 }
 .trademark {
@@ -762,34 +758,34 @@
     content: var(--tw-content);
   }
   @media (width >= 48rem) {
-    font-size: var(--text-5xl, 3rem);
-    line-height: var(--tw-leading, var(--text-5xl--line-height, 1));
+    font-size: var(--text-4xl, 2.25rem);
+    line-height: var(--tw-leading, var(--text-4xl--line-height, calc(2.5 / 2.25)));
   }
   @media (width >= 48rem) {
     --tw-tracking: 0.4em;
     letter-spacing: 0.4em;
   }
   @media (width >= 80rem) {
-    font-size: var(--text-8xl, 6rem);
-    line-height: var(--tw-leading, var(--text-8xl--line-height, 1));
+    font-size: var(--text-5xl, 3rem);
+    line-height: var(--tw-leading, var(--text-5xl--line-height, 1));
   }
 }
 .landmass-subtext {
   font-family: 'Space Mono';
-  font-size: var(--text-xl, 1.25rem);
-  line-height: var(--tw-leading, var(--text-xl--line-height, calc(1.75 / 1.25)));
+  font-size: var(--text-base, 1rem);
+  line-height: var(--tw-leading, var(--text-base--line-height, calc(1.5 / 1)));
   color: var(--color-white, #fff);
   &::after {
     --tw-content: 'Reservation System';
     content: var(--tw-content);
   }
   @media (width >= 48rem) {
-    font-size: var(--text-2xl, 1.5rem);
-    line-height: var(--tw-leading, var(--text-2xl--line-height, calc(2 / 1.5)));
+    font-size: var(--text-xl, 1.25rem);
+    line-height: var(--tw-leading, var(--text-xl--line-height, calc(1.75 / 1.25)));
   }
   @media (width >= 80rem) {
-    font-size: var(--text-5xl, 3rem);
-    line-height: var(--tw-leading, var(--text-5xl--line-height, 1));
+    font-size: var(--text-3xl, 1.875rem);
+    line-height: var(--tw-leading, var(--text-3xl--line-height, calc(2.25 / 1.875)));
   }
 }
 @property --tw-rotate-x {

@@ -413,6 +413,53 @@
   background-image: url('../assets/images/bg-dashboard.jpg');
   background-size: cover;
 }
+#reserve-no {
+  width: calc(1/2 * 100%);
+}
+#reserve-list-main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: calc(var(--spacing, 0.25rem) * 4);
+  border-radius: var(--radius-2xl, 1rem);
+  background-color: color-mix(in srgb, oklch(37.3% 0.034 259.733) 40%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-gray-700, oklch(37.3% 0.034 259.733)) 40%, transparent);
+  }
+}
+.reserve-list-card {
+  width: calc(2/3 * 100%);
+  flex: auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-2xl, 1rem);
+  background-color: #364156ff;
+  padding: calc(var(--spacing, 0.25rem) * 2);
+}
+.right-most-btn {
+  margin-left: auto;
+  display: flex;
+  padding: calc(var(--spacing, 0.25rem) * 2);
+}
+.reserve-view-edit {
+  width: calc(2/3 * 100%);
+  flex: auto;
+  padding: calc(var(--spacing, 0.25rem) * 2);
+}
+.reserve-list-navigation {
+  display: flex;
+  width: calc(2/3 * 100%);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: calc(var(--spacing, 0.25rem) * 4);
+  padding: calc(var(--spacing, 0.25rem) * 2);
+}
+.reserve-navi-btn {
+  width: calc(1/8 * 100%);
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;

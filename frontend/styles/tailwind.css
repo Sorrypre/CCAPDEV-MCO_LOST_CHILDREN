@@ -802,6 +802,7 @@
 #login input {
   width: 30em;
   border-radius: var(--radius-2xl);
+  background-color: var(--color-white);
   padding: calc(var(--spacing) * 2);
   font-family: var(--font-smono);
   font-size: var(--text-base);
@@ -863,6 +864,7 @@
   padding-top: calc(var(--spacing) * 6);
 }
 .login-welcome {
+  font-family: var(--font-smono);
   font-size: 75px;
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
@@ -878,6 +880,7 @@
   }
 }
 .login-suspense {
+  font-family: var(--font-grotesk);
   font-size: 50px;
   color: var(--color-white);
   text-shadow: 5px 5px 2px var(--tw-text-shadow-color, rgba(0,0,0,0.6));

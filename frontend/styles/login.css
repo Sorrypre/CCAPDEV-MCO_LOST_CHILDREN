@@ -11,7 +11,7 @@
 }
 
 #login input {
-	@apply p-2 w-[30em] text-base md:max-lg:text-lg xl:text-xl font-smono rounded-2xl;
+	@apply p-2 w-[30em] bg-white text-base md:max-lg:text-lg xl:text-xl font-smono rounded-2xl;
 }
 
 #login-submit-login {
@@ -35,9 +35,9 @@
 }
 
 .login-welcome {
-	@apply text-shadow-[5px_5px_2px_rgba(0,0,0,0.6)] text-shadow-black text-white font-bold text-[75px] after:content-['Welcome,_Captain!'];
+	@apply text-shadow-[5px_5px_2px_rgba(0,0,0,0.6)] text-shadow-black text-white font-smono font-bold text-[75px] after:content-['Welcome,_Captain!'];
 }
 
 .login-suspense {
-	@apply text-shadow-[5px_5px_2px_rgba(0,0,0,0.6)] text-shadow-black text-white text-[50px] after:content-['Ready_to_explore_the_labs?'];
+	@apply text-shadow-[5px_5px_2px_rgba(0,0,0,0.6)] text-shadow-black text-white font-grotesk text-[50px] after:content-['Ready_to_explore_the_labs?'];
 }

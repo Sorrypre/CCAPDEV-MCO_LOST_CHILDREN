@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+#reserve-no {
+    @apply w-1/2;
+}
+
+#reserve-list-main {
+    @apply bg-gray-700/40 w-full gap-y-4 rounded-2xl flex flex-col justify-center items-center;
+}
+
+.reserve-list-card {
+    @apply p-2 bg-[#364156ff] w-2/3 rounded-2xl flex-auto justify-center items-center;
+}
+
+.right-most-btn {
+    @apply p-2 flex ml-auto;
+}
+
+.reserve-view-edit {
+    @apply p-2 w-2/3 flex-auto;
+}
+
+.reserve-list-navigation {
+    @apply p-2 w-2/3 gap-x-4 flex flex-row justify-center items-center;
+}
+
+.reserve-navi-btn {
+    @apply w-1/8;
+}

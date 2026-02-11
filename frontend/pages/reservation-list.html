@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/tailwind.css" />
+  </head>
+
+  <body id="page">
+    <div id="top">
+      <button type="button" onclick="toggleNav()" class="hamburger-icon"></button>
+      <div class="trademark">
+        <span class="landmass"></span>
+        <span class="landmass-subtext"></span>
+      </div>
+      <!-- NO PROFILE HANDLE -->
+      <div></div>
+    </div>
+
+    <div class="content-area">
+      <!--SideNavigation-->
+      <div id="in-side-nav" class="side-nav">
+        <a>Dashboard</a>
+        <a>Reserve Seats</a>
+        <a>See Reservations</a>
+        <a>Account Setting</a>
+        <a>Contact Us</a>
+        <a>Log Out</a>
+      </div>
+
+      <div id="reserve-list-main"> <!--flexbox col-->
+        <div class="right-most-btn"> <!--fb col 1-->
+          <button id="back-to-menu-btn">Back</button>
+        </div>
+
+        <div class="reserve-view-edit">  <!--fb col 2-->
+          <button id="edit-btn">Edit</button>
+          <button id="filter-btn">Filter</button>
+        </div>
+
+        <div class="reserve-list-card">  <!--fb col 3-->
+          <div id="reservation-list">
+            <!--Insert here resevartion details-->
+          </div>
+        </div>
+
+        <div class="reserve-list-navigation">  <!--fb col 4-->
+          <button class="reserve-navi-btn" id="next-btn">&#8617;</button>
+          <p id="reserve-no"></p>
+          <button class="reserve-navi-btn" id="back-btn">&#8618;</button>
+        </div>
+
+        <div> <!--fb col 5-->
+          <p id="reserve-page-no">1...16</p>
+        </div>
+      </div>
+    </div>
+  <script src="../../backend/main.js"> </script>
+  </body>
+</html>

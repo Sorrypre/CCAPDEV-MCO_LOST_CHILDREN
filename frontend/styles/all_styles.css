@@ -89,6 +89,11 @@
 .content-area {
 	@apply w-full flex;
 }
+
+.content-area a {
+	@apply font-grotesk text-white;
+}
+
 .side-nav {
 	@apply fixed overflow-hidden h-full w-0 bg-gray-800/40 flex flex-col gap-y-4 justify-start items-start pt-4 duration-500 ease-in-out;
 }

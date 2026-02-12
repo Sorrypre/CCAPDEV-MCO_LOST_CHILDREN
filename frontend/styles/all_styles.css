@@ -41,6 +41,7 @@
 @import './login.css';
 @import './dashboard.css';
 @import './reservation-list.css';
+@import './DLSU-buildings.css';
 
 /* BACKGROUNDS */
 
@@ -52,8 +53,8 @@
 	@apply bg-cover bg-[url('../assets/images/bg-dashboard.jpg')];
 }
 
-.reservation-list-background {
-	@apply bg-cover bg-[url('../assets/images/bg-reservation-list.jpg')];
+.dlsuBuildings-background {
+	@apply bg-cover bg-[url('../assets/images/bg-dlsuBuildings.jpg')];
 }
 
 /* GENERAL CONFIG */
@@ -91,13 +92,13 @@
 }
 
 .content-area {
-	@apply w-full h-[calc(100vh-85px)] flex;
+	@apply w-full flex;
+}
+
+.content-area a {
+	@apply font-grotesk text-white;
 }
 
 .side-nav {
-	@apply fixed overflow-hidden h-full w-0 bg-[#11151C]/70 flex flex-col gap-y-8 justify-start items-start pt-4 duration-300 ease-in-out;
-}
-
-.side-nav a {
-	@apply text-white text-2xl font-grotesk font-bold pl-4;
+	@apply fixed overflow-hidden h-full w-0 bg-gray-800/40 flex flex-col gap-y-4 justify-start items-start pt-4 duration-500 ease-in-out;
 }

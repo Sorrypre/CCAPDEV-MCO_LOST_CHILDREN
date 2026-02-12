@@ -50,19 +50,15 @@ body{
     @apply flex flex-col gap-4 w-full;
 }
 
-#reserved-time select{
+#reserved-time{
     @apply border-none outline-none appearance-none bg-transparent;
     @apply border-b border-solid border-white;
-    @apply focus-ring-0 focus:outline-none;
 }
 
 #reserved-date, #reserved-date:focus, #reserved-time{
     @apply border-none;
-    @apply border-b border-solid border-white
-}
-
-#reserved-date{
-    @apply placeholder-white placeholder-opacity-100;
+    @apply border-b border-solid border-white;
+    @apply placeholder:text-white;
 }
 
 #available-rooms-container{

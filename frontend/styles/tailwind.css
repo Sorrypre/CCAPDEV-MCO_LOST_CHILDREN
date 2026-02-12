@@ -8,6 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-yellow-600: oklch(68.1% 0.162 75.834);
+    --color-green-700: oklch(52.7% 0.154 150.069);
     --color-blue-700: oklch(48.8% 0.243 264.376);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-700: oklch(37.3% 0.034 259.733);
@@ -782,7 +783,14 @@
   }
 }
 @layer utilities;
-#login {
+#index-content {
+  margin-top: calc(var(--spacing) * 10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#login, #register {
   display: flex;
   max-width: 700px;
   flex-wrap: wrap;
@@ -794,20 +802,29 @@
   }
   padding: calc(var(--spacing) * 6);
 }
-#login label {
+#register {
+  display: none;
+}
+label {
   width: 100%;
   font-family: var(--font-inter);
-  font-size: 30px;
+  font-size: 15px;
   color: var(--color-white);
+  @media (width >= 48rem) {
+    font-size: 30px;
+  }
 }
-#login input {
-  width: 30em;
+input {
   border-radius: var(--radius-2xl);
   background-color: var(--color-white);
   padding: calc(var(--spacing) * 2);
   font-family: var(--font-smono);
   font-size: var(--text-base);
   line-height: var(--tw-leading, var(--text-base--line-height));
+  font-size: 15px;
+  @media (width >= 48rem) {
+    width: 30em;
+  }
   @media (width >= 48rem) {
     @media (width < 64rem) {
       font-size: var(--text-lg);
@@ -824,13 +841,22 @@
   border-radius: var(--radius-xl);
   background-color: var(--color-blue-700);
   padding: calc(var(--spacing) * 3);
-  font-family: var(--font-dmsans);
-  font-size: 30px;
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
-  color: var(--color-white);
   &::after {
     --tw-content: 'Login';
+    content: var(--tw-content);
+  }
+}
+#register-new-user {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  background-color: var(--color-green-700);
+  padding: calc(var(--spacing) * 3);
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  &::after {
+    --tw-content: 'Create Account';
     content: var(--tw-content);
   }
 }
@@ -839,34 +865,49 @@
   border-radius: var(--radius-xl);
   background-color: var(--color-gray-800);
   padding: calc(var(--spacing) * 3);
-  font-family: var(--font-dmsans);
-  font-size: 30px;
-  color: var(--color-white);
   &::after {
     --tw-content: 'Register';
+    content: var(--tw-content);
+  }
+}
+#register-cancel {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  background-color: var(--color-gray-800);
+  padding: calc(var(--spacing) * 3);
+  &::after {
+    --tw-content: 'Back to Login';
     content: var(--tw-content);
   }
 }
 .login-entry {
   max-width: 600px;
 }
-.login-buttons-area {
+.login-button-text {
+  font-family: var(--font-dmsans);
+  font-size: 15px;
+  color: var(--color-white);
+  @media (width >= 48rem) {
+    font-size: 30px;
+  }
+}
+.login-buttons-area, .register-buttons-area {
   display: flex;
   width: 100%;
   flex-direction: column;
   row-gap: calc(var(--spacing) * 2);
   padding: calc(var(--spacing) * 5);
 }
-.login-intro {
+.index-intro {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   padding-top: calc(var(--spacing) * 6);
 }
-.login-welcome {
+.index-welcome {
   font-family: var(--font-smono);
-  font-size: 75px;
+  font-size: 30px;
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
@@ -879,10 +920,13 @@
     --tw-content: 'Welcome, Captain!';
     content: var(--tw-content);
   }
+  @media (width >= 48rem) {
+    font-size: 65px;
+  }
 }
-.login-suspense {
+.index-suspense {
   font-family: var(--font-grotesk);
-  font-size: 50px;
+  font-size: 20px;
   color: var(--color-white);
   text-shadow: 5px 5px 2px var(--tw-text-shadow-color, rgba(0,0,0,0.6));
   --tw-text-shadow-color: #000;
@@ -892,6 +936,9 @@
   &::after {
     --tw-content: 'Ready to explore the labs?';
     content: var(--tw-content);
+  }
+  @media (width >= 48rem) {
+    font-size: 50px;
   }
 }
 @layer theme, base, components, utilities;
@@ -1674,6 +1721,12 @@
   width: 300px;
   height: 300px;
 }
+#dlsuBuildings-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 #content-menu-area-dlsuBuildings {
   margin-top: calc(var(--spacing) * 50);
   display: flex;
@@ -1858,6 +1911,13 @@
   transition-duration: 500ms;
   --tw-ease: var(--ease-in-out);
   transition-timing-function: var(--ease-in-out);
+}
+.content {
+  margin-top: calc(var(--spacing) * 10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 @property --tw-rotate-x {
   syntax: "*";

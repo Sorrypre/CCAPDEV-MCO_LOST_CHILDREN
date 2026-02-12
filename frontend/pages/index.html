@@ -4,9 +4,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../styles/tailwind.css" />
 	</head>
-	<body id="page" class="login-background">
+	<body id="page" class="login login-background">
 		<div id="top">
-			<span class="hamburger-icon"></span>
+			<span id="hamburger-btn" class="hamburger-icon"></span>
 			<div class="trademark">
 				<span class="landmass"></span>
 				<span class="landmass-subtext"></span>
@@ -15,12 +15,12 @@
 			<div></div>
 		</div>
 		<div class="content-area">
-			<div id="in-side-nav" class="side-nav">
+			<div id="in-side-nav" class="login side-nav">
 				<a>Dashboard</a>
 				<a>Reserve Seats</a>
 				<a>See Reservations</a>
 				<a>Account Setting</a>
-				<a>Contact Us</a>
+				<a class="login-visible">Contact Us</a>
 				<a>Log Out</a>
 			</div>
 			<div id="index-content">
@@ -78,5 +78,6 @@
 			</div>
 		</div>
 		<script src="../../backend/index.js"></script>
+		<script src="../../backend/main.js"></script>
 	</body>
 </html>

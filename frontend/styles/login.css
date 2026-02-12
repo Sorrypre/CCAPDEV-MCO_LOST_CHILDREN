@@ -2,19 +2,19 @@
 
 /* LOGIN */
 
-form {
+.login form {
 	@apply transition-discrete duration-200;
 }
 
-label {
+.login label {
 	@apply w-full text-white text-[15px] md:text-[30px] font-inter;
 }
 
-input {
+.login input {
 	@apply p-2 text-[15px] w-full bg-white text-base md:max-lg:text-lg xl:text-xl font-smono rounded-2xl;
 }
 
-button {
+.login button {
 	@apply cursor-pointer transition duration-350 hover:brightness-175;
 }
 

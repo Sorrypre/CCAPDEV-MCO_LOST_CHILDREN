@@ -825,12 +825,12 @@
   }
 }
 @layer utilities;
-form {
+.login form {
   transition-behavior: allow-discrete;
   --tw-duration: 200ms;
   transition-duration: 200ms;
 }
-label {
+.login label {
   width: 100%;
   font-family: var(--font-inter);
   font-size: 15px;
@@ -839,7 +839,7 @@ label {
     font-size: 30px;
   }
 }
-input {
+.login input {
   width: 100%;
   border-radius: var(--radius-2xl);
   background-color: var(--color-white);
@@ -859,7 +859,7 @@ input {
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
 }
-button {
+.login button {
   cursor: pointer;
   transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
   transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -2564,6 +2564,26 @@ body {
 #hamburger-btn {
   margin-bottom: calc(var(--spacing) * 2);
   margin-left: calc(var(--spacing) * 4);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 200ms;
+  transition-duration: 200ms;
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-white);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-black);
+    }
+  }
 }
 .wrap-spacer {
   width: 100%;
@@ -2697,6 +2717,9 @@ body {
   transition-duration: 500ms;
   --tw-ease: var(--ease-in-out);
   transition-timing-function: var(--ease-in-out);
+}
+.login.side-nav a:not(.login-visible) {
+  display: none;
 }
 .content {
   margin-top: calc(var(--spacing) * 10);

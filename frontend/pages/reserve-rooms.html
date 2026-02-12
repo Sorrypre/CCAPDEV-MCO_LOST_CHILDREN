@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../styles/tailwind.css" />
+	</head>
+	<body class="reservation-room dashboard-background">
+		<div id="top">
+			<!--<img class="hamburger-icon" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg" />-->
+			<span class="hamburger-icon"></span>
+			<div class="trademark">
+				<span class="landmass"></span>
+				<span class="landmass-subtext"></span>
+			</div>
+			<div class="profile-bubble">
+				<!-- PROFILE -->
+			</div>
+		</div>
+        
+		<div id="content">
+            <div id="go-back-container">
+                <span class="go-back-text">Go Back</span>
+            </div>
+            <div id="available-text-container">
+                <p class="reserve-bldg-text"></p>
+                <p class="available-text">Available Rooms</p>
+            </div>
+            <div id="content-area">
+                <div id="date-time-selection">
+                    <input type="text" placeholder="Pick Date" onclick="{this.type='date'}; try{this.showPicker();} catch(e) {}" onblur="if(this.value==''){this.type='text'}" id="reserved-date" name="reserved-date">
+                    <!-- 0730H to 1700H (2hrs reservation) -->
+                    <select id="reserved-time" name="reserved-time" >
+                        <option selected hidden disabled>Pick Start Time</option>
+                        <option>0730</option>
+                        <option>0800</option>
+                        <option>0830</option>
+                        <option>0900</option>
+                        <option>0930</option>
+                        <option>1000</option>
+                        <option>1030</option>
+                        <option>1100</option>
+                        <option>1130</option>
+                        <option>1200</option>
+                        <option>1230</option>
+                        <option>1300</option>
+                        <option>1330</option>
+                        <option>1400</option>
+                        <option>1430</option>
+                        <option>1530</option>
+                        <option>1600</option>
+                        <option>1630</option>
+                        <option>1700</option>
+                    </select>
+                </div>
+                <div id="available-rooms-container">
+                    <div class="room-container">
+                        <div>G203</div>
+                        <span>34/35</span>
+                    </div>
+                    <div class="room-container">
+                        <div>G204</div>
+                        <span>20/35</span>
+                    </div>
+                    <div class="room-container">
+                        <div>G205</div>
+                        <span>18/35</span>
+                    </div>
+                    <div class="room-container">
+                        <div>G206</div>
+                        <span>25/35</span>
+                    </div>
+                    <div class="room-container">
+                        <div>G207</div>
+                        <span>10/35</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>

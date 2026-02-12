@@ -1590,6 +1590,12 @@
   width: 300px;
   height: 300px;
 }
+#dlsuBuildings-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 #content-menu-area-dlsuBuildings {
   margin-top: calc(var(--spacing) * 50);
   display: flex;

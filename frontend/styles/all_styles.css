@@ -100,7 +100,7 @@
 }
 
 .content-area a {
-	@apply font-grotesk text-white;
+	@apply font-grotesk text-white hover:bg-white hover:text-black hover:cursor-pointer;
 }
 
 .side-nav {

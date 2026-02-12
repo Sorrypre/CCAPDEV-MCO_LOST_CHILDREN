@@ -7,7 +7,7 @@
 	<body class="reservation-room dashboard-background">
 		<div id="top">
 			<!--<img class="hamburger-icon" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg" />-->
-			<span class="hamburger-icon"></span>
+			<button type="button" onclick="toggleNav()" class="hamburger-icon"></button>
 			<div class="trademark">
 				<span class="landmass"></span>
 				<span class="landmass-subtext"></span>
@@ -16,13 +16,21 @@
 				<!-- PROFILE -->
 			</div>
 		</div>
-        
+        <div id="in-side-nav" class="side-nav">
+            <a>Dashboard</a>
+            <a>Reserve Seats</a>
+            <a>See Reservations</a>
+            <a>Account Setting</a>
+            <a>Contact Us</a>
+            <a>Log Out</a>
+        </div>
 		<div id="content">
+        
             <div id="go-back-container">
                 <span class="go-back-text">Go Back</span>
             </div>
             <div id="available-text-container">
-                <p class="reserve-bldg-text">Gokongwei</p>
+                <p class="reserve-bldg-text">Gokongwei Hall</p>
                 <p class="available-text">Available Rooms</p>
             </div>
             <div id="content-area">
@@ -53,28 +61,35 @@
                     </select>
                 </div>
                 <div id="available-rooms-container">
-                    <div class="room-container">
+                    <div class="room-container" id="g203">
                         <div>G203</div>
                         <span>34/35</span>
                     </div>
-                    <div class="room-container">
+                    <div class="room-container" id="g204">
                         <div>G204</div>
                         <span>20/35</span>
                     </div>
-                    <div class="room-container">
+                    <div class="room-container" id="g205">
                         <div>G205</div>
                         <span>18/35</span>
                     </div>
-                    <div class="room-container">
+                    <div class="room-container" id="g206">
                         <div>G206</div>
                         <span>25/35</span>
                     </div>
-                    <div class="room-container">
+                    <div class="room-container" id="g207">
                         <div>G207</div>
                         <span>10/35</span>
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+            let go_back = document.querySelector("#go-back-container .go-back-text");
+            go_back.onclick = function (){
+                window.location.href = "DLSU-buildings.html";
+            };
+        </script>
+        <script src="../../backend/main.js"> </script>
 	</body>
 </html>

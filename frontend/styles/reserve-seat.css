@@ -102,3 +102,39 @@ body{
     @apply h-5 w-5 rounded-t-sm m-[5px] ;
     @apply md:h-5 md:w-5 rounded-t-lg md:m-[10px] ;
 } */
+
+
+#confirm-modal{
+    @apply p-10 fixed inset-0 z-[100] hidden items-center justify-center;
+}
+.hidden {
+    display: none !important;
+}
+
+.flex {
+    display: flex !important;
+}
+#confirm-modal-area{
+    @apply bg-gray-800 rounded-xl w-full;
+    /* @apply max-w-d */
+}
+
+#confirm-modal h2{
+    @apply p-3 text-white text-2xl font-bold text-center
+}
+
+#modal-details{
+    @apply text-gray-200 text-sm mb-8 p-4
+}
+
+.dialog-buttons{
+    @apply flex flex-col gap-2 m-2
+}
+
+.confirm-btn{
+    @apply w-full bg-[#5d5d81] text-white font-bold
+}
+
+.cancel-btn{
+    @apply w-full text-gray-400
+}

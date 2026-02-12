@@ -61,7 +61,3 @@ input {
 .index-suspense {
 	@apply text-shadow-[5px_5px_2px_rgba(0,0,0,0.6)] text-shadow-black text-white font-grotesk text-[20px] md:text-[50px] after:content-['Ready_to_explore_the_labs?'];
 }
-
-.tab-hidden {
-	@apply hidden;
-}

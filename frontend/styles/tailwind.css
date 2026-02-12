@@ -1724,6 +1724,56 @@ input {
   width: 300px;
   height: 300px;
 }
+#back-to-dashboard {
+  border-radius: var(--radius-xl);
+  background-color: var(--color-white);
+  padding: calc(var(--spacing) * 3);
+  font-family: var(--font-dmsans);
+  font-size: 16px;
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: #364156;
+  &:hover {
+    @media (hover: hover) {
+      background-color: #364156;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-white);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+    }
+  }
+}
+.reserve-list-btn {
+  border-radius: var(--radius-xl);
+  background-color: var(--color-white);
+  padding: calc(var(--spacing) * 3);
+  font-family: var(--font-dmsans);
+  font-size: 16px;
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: #364156;
+  &:hover {
+    @media (hover: hover) {
+      background-color: #364156;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-white);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+    }
+  }
+}
 #dlsuBuildings-content {
   display: flex;
   flex-direction: column;
@@ -1892,8 +1942,30 @@ input {
   width: 100%;
 }
 .content-area a {
+  border-radius: var(--radius-2xl);
+  padding: calc(var(--spacing) * 2);
   font-family: var(--font-grotesk);
   color: var(--color-white);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-white);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-black);
+    }
+  }
 }
 .side-nav {
   position: fixed;

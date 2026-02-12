@@ -2,42 +2,74 @@
 
 /* LOGIN */
 
-#login {
+form {
+	@apply transition-discrete duration-300;
+}
+
+label {
+	@apply w-full text-white text-[15px] md:text-[30px] font-inter;
+}
+
+input {
+	@apply p-2 text-[15px] md:w-[30em] bg-white text-base md:max-lg:text-lg xl:text-xl font-smono rounded-2xl;
+}
+
+button {
+	@apply cursor-pointer transition duration-350 hover:brightness-175;
+}
+
+#index-content {
+	@apply mt-10 flex flex-col justify-center items-center;
+}
+
+#index-forms {
+	@apply flex flex-row;
+}
+
+#login, #register {
 	@apply p-6 bg-gray-700/40 max-w-[700px] rounded-2xl flex flex-wrap justify-center;
 }
 
-#login label {
-	@apply w-full text-white text-[30px] font-inter;
-}
-
-#login input {
-	@apply p-2 w-[30em] bg-white text-base md:max-lg:text-lg xl:text-xl font-smono rounded-2xl;
+#register {
+	@apply hidden;
 }
 
 #login-submit-login {
-	@apply p-3 w-full bg-blue-700 text-[30px] text-white font-bold font-dmsans rounded-xl after:content-['Login'];
+	@apply p-3 w-full bg-blue-700 font-bold rounded-xl after:content-['Login'];
+}
+
+#register-new-user {
+	@apply p-3 w-full bg-green-700 font-bold rounded-xl after:content-['Create_Account'];
 }
 
 #login-register {
-	@apply p-3 w-full bg-gray-800 text-[30px] text-white font-dmsans rounded-xl after:content-['Register'];
+	@apply p-3 w-full bg-gray-800 rounded-xl after:content-['Register'];
+}
+
+#register-cancel {
+	@apply p-3 w-full bg-gray-800 rounded-xl after:content-['Back_to_Login'];
 }
 
 .login-entry {
 	@apply max-w-[600px];
 }
 
-.login-buttons-area {
+.login-button-text {
+	@apply text-[15px] md:text-[30px] text-white font-dmsans;
+}
+
+.login-buttons-area, .register-buttons-area {
 	@apply p-5 w-full flex flex-col gap-y-2;
 }
 
-.login-intro {
+.index-intro {
 	@apply pt-6 flex flex-wrap justify-center items-center;
 }
 
-.login-welcome {
-	@apply text-shadow-[5px_5px_2px_rgba(0,0,0,0.6)] text-shadow-black text-white font-smono font-bold text-[75px] after:content-['Welcome,_Captain!'];
+.index-welcome {
+	@apply text-shadow-[5px_5px_2px_rgba(0,0,0,0.6)] text-shadow-black text-white font-smono font-bold text-[30px] md:text-[65px] after:content-['Welcome,_Captain!'];
 }
 
-.login-suspense {
-	@apply text-shadow-[5px_5px_2px_rgba(0,0,0,0.6)] text-shadow-black text-white font-grotesk text-[50px] after:content-['Ready_to_explore_the_labs?'];
+.index-suspense {
+	@apply text-shadow-[5px_5px_2px_rgba(0,0,0,0.6)] text-shadow-black text-white font-grotesk text-[20px] md:text-[50px] after:content-['Ready_to_explore_the_labs?'];
 }

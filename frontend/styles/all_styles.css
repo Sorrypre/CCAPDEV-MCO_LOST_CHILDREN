@@ -43,6 +43,7 @@
 @import './reservation-list.css';
 @import './reserve-rooms.css';
 @import './reserve-seat.css';
+@import './DLSU-buildings.css';
 
 /* BACKGROUNDS */
 
@@ -54,6 +55,14 @@
 	@apply bg-cover bg-[url('../assets/images/bg-dashboard.jpg')];
 }
 
+.dlsuBuildings-background {
+	@apply bg-cover bg-[url('../assets/images/bg-dlsuBuildings.jpg')];
+}
+
+.reservation-list-background {
+	@apply bg-cover bg-[url('../assets/images/bg-reservation-list.jpg')];
+}
+
 /* GENERAL CONFIG */
 
 #page {
@@ -62,6 +71,10 @@
 
 #top {
 	@apply max-h-[100px] bg-zinc-600 w-full flex justify-between items-center;
+}
+
+#hamburger-btn {
+	@apply ml-4 mb-2;
 }
 
 .wrap-spacer {
@@ -89,8 +102,17 @@
 }
 
 .content-area {
-	@apply w-full flex;
+	@apply w-full h-full;
 }
+
+.content-area a {
+	@apply font-grotesk text-white hover:bg-white hover:text-black hover:cursor-pointer transition duration-300 rounded-2xl p-2;
+}
+
 .side-nav {
 	@apply fixed overflow-hidden h-full w-0 bg-gray-800/40 flex flex-col gap-y-4 justify-start items-start pt-4 duration-500 ease-in-out;
+}
+
+.content {
+	@apply mt-10 flex flex-col justify-center items-center;
 }

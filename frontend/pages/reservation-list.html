@@ -8,7 +8,7 @@
 
   <body id="page" class="reservation-list-background">
     <div id="top">
-      <button type="button" onclick="toggleNav()" class="hamburger-icon"></button>
+      <button type="button" class="hamburger-icon" id="hamburger-btn"></button>
       <div class="trademark">
         <span class="landmass"></span>
         <span class="landmass-subtext"></span>
@@ -28,6 +28,27 @@
         <a>Log Out</a>
       </div>
 
+      <div id="filter-area">
+        <span id="text-filter">Filter Settings</span>
+        <div id="filter-date">
+          <button class="filter-date-btns" id="filter-all">All</button>
+          <button class="filter-date-btns" id="filter-today">Today</button>
+          <button class="filter-date-btns" id="filter-tomo">Tomorrow</button>
+        </div>
+
+        <div id="filter-time">
+          <label for="filter-time-start">Start Time</label>
+          <input type="time" id="filter-time-start" name="filter-time-start">
+          <label for="filter-time-end">End Time</label>
+          <input type="time" id="filter-time-end" name="filter-time-end">
+        </div>
+
+        <div  id="filter-save-close">
+          <button class="filter-btns" id="filter-close-btn">Close</button>
+          <button class="filter-btns" id="filter-save-btn">Save</button>
+        </div>
+      </div>
+
       <div id="reserve-list-main"> <!--flexbox col-->
         <div class="right-most-btn"> <!--fb col 1-->
           <button class="reserve-list-btn" id="back-to-menu-btn">Back</button>
@@ -36,29 +57,6 @@
         <div class="reserve-view-edit">  <!--fb col 2-->
           <button class="reserve-list-btn" id="filter-btn">Filter</button>
           <button class="reserve-list-btn" id="edit-btn">Edit</button>
-          <div class="filter-area">
-            <span>Filter Settings</span>
-            <div id="filter-date">
-              <button class="filter-date-btns">General</button>
-              <button class="filter-date-btns">M</button>
-              <button class="filter-date-btns">T</button>
-              <button class="filter-date-btns">W</button>
-              <button class="filter-date-btns">H</button>
-              <button class="filter-date-btns">F</button>
-              <button class="filter-date-btns">S</button>
-            </div>
-
-            <div id="filter-time">
-              <label for="filter-time-start">Start Time</label>
-                <input type="time" id="filter-time-start" name="filter-time-start">
-              <label for="filter-time-end">End Time</label>
-                <input type="time" id="filter-time-end" name="filter-time-end">
-            </div>
-
-            <div  id="filter-save">
-              <button id="filter-save-btn">Save</button>
-            </div>
-          </div>
         </div>
 
         <div class="reserve-list-card">  <!--fb col 3-->

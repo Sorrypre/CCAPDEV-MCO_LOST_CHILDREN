@@ -71,6 +71,10 @@
 	@apply max-h-[100px] bg-zinc-600 w-full flex justify-between items-center;
 }
 
+#hamburger-btn {
+	@apply ml-4 mb-2;
+}
+
 .wrap-spacer {
 	@apply w-full;
 }

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../styles/tailwind.css" />
   </head>
 
-  <body id="page">
+  <body id="page" class="reservation-list-background">
     <div id="top">
       <button type="button" onclick="toggleNav()" class="hamburger-icon"></button>
       <div class="trademark">
@@ -30,12 +30,35 @@
 
       <div id="reserve-list-main"> <!--flexbox col-->
         <div class="right-most-btn"> <!--fb col 1-->
-          <button id="back-to-menu-btn">Back</button>
+          <button class="reserve-list-btn" id="back-to-menu-btn">Back</button>
         </div>
 
         <div class="reserve-view-edit">  <!--fb col 2-->
-          <button id="edit-btn">Edit</button>
-          <button id="filter-btn">Filter</button>
+          <button class="reserve-list-btn" id="filter-btn">Filter</button>
+          <button class="reserve-list-btn" id="edit-btn">Edit</button>
+          <div class="filter-area">
+            <span>Filter Settings</span>
+            <div id="filter-date">
+              <button class="filter-date-btns">General</button>
+              <button class="filter-date-btns">M</button>
+              <button class="filter-date-btns">T</button>
+              <button class="filter-date-btns">W</button>
+              <button class="filter-date-btns">H</button>
+              <button class="filter-date-btns">F</button>
+              <button class="filter-date-btns">S</button>
+            </div>
+
+            <div id="filter-time">
+              <label for="filter-time-start">Start Time</label>
+                <input type="time" id="filter-time-start" name="filter-time-start">
+              <label for="filter-time-end">End Time</label>
+                <input type="time" id="filter-time-end" name="filter-time-end">
+            </div>
+
+            <div  id="filter-save">
+              <button id="filter-save-btn">Save</button>
+            </div>
+          </div>
         </div>
 
         <div class="reserve-list-card">  <!--fb col 3-->
@@ -45,9 +68,9 @@
         </div>
 
         <div class="reserve-list-navigation">  <!--fb col 4-->
-          <button class="reserve-navi-btn" id="next-btn">&#8617;</button>
+          <button class="reserve-list-btn" id="next-btn">&#8617;</button>
           <p id="reserve-no"></p>
-          <button class="reserve-navi-btn" id="back-btn">&#8618;</button>
+          <button class="reserve-list-btn" id="back-btn">&#8618;</button>
         </div>
 
         <div> <!--fb col 5-->

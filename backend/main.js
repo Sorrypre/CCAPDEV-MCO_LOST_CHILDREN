@@ -12,3 +12,4 @@ function toggleNav() {
     }
     nav_toggled = !nav_toggled;
 }
+

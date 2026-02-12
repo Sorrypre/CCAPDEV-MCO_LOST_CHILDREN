@@ -5,25 +5,51 @@
 }
 
 #reserve-list-main {
-    @apply bg-gray-700/40 w-full gap-y-4 rounded-2xl flex flex-col justify-center items-center;
+    @apply bg-gray-700/40 w-full gap-y-4 flex flex-col flex-grow items-center;
 }
 
+#filter-date {
+
+}
+
+#filter-time {
+
+}
+
+#filter-save-btn {
+
+}
+
+.reserve-list-main div p {
+    @apply text-white text-2xl font-bold font-grotesk;
+}
 .reserve-list-card {
-    @apply p-2 bg-[#364156ff] w-2/3 rounded-2xl flex-auto justify-center items-center;
+    @apply p-2 bg-[#364156ff] w-2/3 h-2/3 rounded-2xl flex-col justify-center items-center;
 }
 
 .right-most-btn {
-    @apply p-2 flex ml-auto;
+    @apply p-4 mr-5 flex ml-auto;
 }
 
 .reserve-view-edit {
-    @apply p-2 w-2/3 flex-auto;
+    @apply p-2 w-2/3 gap-x-10 flex flex-row justify-items-start items-start;
 }
 
 .reserve-list-navigation {
     @apply p-2 w-2/3 gap-x-4 flex flex-row justify-center items-center;
 }
 
-.reserve-navi-btn {
-    @apply w-1/8;
+.reserve-list-btn {
+    @apply p-3 bg-white text-[16px] text-[#364156] font-bold font-dmsans rounded-xl;
+    @apply hover:bg-[#364156] hover:text-white;
+    @apply hover:cursor-pointer;
+}
+
+.filter-area {
+    @apply  hidden flex-col gap-y-4 z-10 justify-center items-center transition-all duration-500 ease-in-out;
+    @apply  bg-[#212D40] rounded-2xl;
+}
+
+.filter-date-btns {
+    @apply w-full flex flex-row gap-x-4 justify-center items-center;
 }

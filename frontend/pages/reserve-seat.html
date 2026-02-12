@@ -18,6 +18,14 @@
 		</div>
         
 		<div id="content">
+            <div id="in-side-nav" class="side-nav">
+				<a>Dashboard</a>
+				<a>Reserve Seats</a>
+				<a>See Reservations</a>
+				<a>Account Setting</a>
+				<a>Contact Us</a>
+				<a>Log Out</a>
+			</div>
             <div id="go-back-container">
                 <span class="go-back-text">Go Back</span>
             </div>
@@ -107,29 +115,35 @@
                 </div>
             </div>
         </div>
-	<script>
-        let container = document.getElementById("slots-container");
+        <script>
 
-        container.addEventListener("click", (e) => {
-            if(e.target.classList.contains('seat')){
-                console.log("Seat clicked:", e.target.dataset.pc);
-                e.target.classList.toggle("selected");
+            let go_back = document.querySelector("#go-back-container .go-back-text");
+            go_back.onclick = function (){
+                window.location.href = "reserve-rooms.html";
+            };
+            let container = document.getElementById("slots-container");
+
+            container.addEventListener("click", (e) => {
+                if(e.target.classList.contains('seat')){
+                    console.log("Seat clicked:", e.target.dataset.pc);
+                    e.target.classList.toggle("selected");
+                }
+
+            });
+            
+            const modal = document.getElementById('confirm-modal');
+
+            function openModal() {
+                console.log('open')
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
             }
 
-        });
-        
-        const modal = document.getElementById('confirm-modal');
-
-        function openModal() {
-            console.log('open')
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-        }
-
-        function closeModal() {
-            modal.classList.remove('flex');
-            modal.classList.add('hidden');
-        }
-    </script>
+            function closeModal() {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }
+        </script>
+        <script src="../../backend/main.js"> </script>
     </body>
 </html>

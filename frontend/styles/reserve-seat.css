@@ -23,6 +23,7 @@ body{
 
 .go-back-text{
     @apply block text-right;
+    @apply cursor-pointer;
 }
 
 #go-back-container{

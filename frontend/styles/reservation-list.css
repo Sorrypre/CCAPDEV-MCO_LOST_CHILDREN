@@ -5,7 +5,7 @@
 }
 
 #reserve-list-main {
-    @apply bg-gray-700/40 w-full gap-y-4 flex flex-col flex-grow items-center;
+    @apply w-full gap-y-4 flex flex-col flex-grow items-center;
 }
 
 #filter-date {
@@ -24,7 +24,7 @@
     @apply text-white text-2xl font-bold font-grotesk;
 }
 .reserve-list-card {
-    @apply p-2 bg-[#364156ff] w-2/3 h-2/3 rounded-2xl flex-col justify-center items-center;
+    @apply p-2 bg-[#364156ff] w-2/3 min-h-[500px] h-2/3 rounded-2xl flex-col justify-center items-center;
 }
 
 .right-most-btn {

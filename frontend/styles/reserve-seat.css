@@ -13,9 +13,6 @@ body{
     @apply font-grotesk;
     @apply text-white;
 }
-#date-time-selection option{
-    @apply text-black;
-}
 
 .whiteboard{
     @apply text-black

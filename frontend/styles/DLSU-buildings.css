@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+#HenrySy-area img{
+    width: 300px;
+    height: 300px;
+}
+#content-menu-area-dlsuBuildings {
+    @apply flex flex-col md:flex-row shrink-0 p-4 flex-wrap grow md:grow-0 gap-50 justify-center mt-50
+}
+.building-name {
+    @apply font-grotesk text-2xl text-white font-bold text-center bg-[#B1B2B5]/50 rounded-xl p-2
+}
+.invisible-card-container{
+    @apply motion-safe:animate-[bounce_5s_infinite] hover:animate-none
+}

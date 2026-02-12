@@ -31,7 +31,7 @@ body{
     @apply flex flex-row items-center h-screen overflow-hidden
 }
 .reserve-bldg-text{
-	@apply pt-7 text-5xl md:text-7xl text-white font-bold justify-self-center after:content-['BUILDING'];
+	@apply pt-7 text-5xl md:text-7xl text-white font-bold justify-self-center;
 }
 .available-text{
     @apply pt-7 text-lg text-white font-bold justify-self-center;

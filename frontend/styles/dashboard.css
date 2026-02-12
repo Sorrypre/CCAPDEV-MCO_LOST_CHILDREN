@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
-#page.dashboard .dashboard-text, .dashboard-card p, .dashboard-card span {
+.dashboard-text, .dashboard-card p, .dashboard-card span {
 	@apply font-grotesk;
 }
 
 .dashboard-text {
-	@apply pt-7 text-3xl md:text-8xl text-white font-bold justify-self-center after:content-['EXPLORE'];
+	@apply font-grotesk pt-7 text-3xl md:text-8xl text-white font-bold justify-self-center after:content-['EXPLORE'];
 }
 
-#content {
-	@apply mt-10 flex flex-wrap gap-4;
+#dashboard-content {
+	@apply mt-10 flex flex-col justify-center items-center;
 }
 
-#content-menu-area {
+#dashboard-content-menu-area {
 	@apply p-4 flex flex-wrap justify-center items-stretch gap-12;
 }
 

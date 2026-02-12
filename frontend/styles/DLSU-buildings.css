@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+#HenrySy-area img{
+    width: 300px;
+    height: 300px;
+}
+#back-to-dashboard{
+    @apply p-3 bg-white text-[16px] text-[#364156] font-bold font-dmsans rounded-xl;
+    @apply hover:bg-[#364156] hover:text-white;
+    @apply hover:cursor-pointer;
+}
+.reserve-list-btn {
+    @apply p-3 bg-white text-[16px] text-[#364156] font-bold font-dmsans rounded-xl;
+    @apply hover:bg-[#364156] hover:text-white;
+    @apply hover:cursor-pointer;
+}
+#dlsuBuildings-content {
+    @apply flex flex-col justify-center items-center;
+}
+#content-menu-area-dlsuBuildings {
+    @apply flex flex-col md:flex-row shrink-0 p-4 flex-wrap grow md:grow-0 gap-50 justify-center mt-50
+}
+.building-name {
+    @apply font-grotesk text-2xl text-white font-bold text-center bg-[#B1B2B5]/50 rounded-xl p-2
+}
+.invisible-card-container{
+    @apply motion-safe:animate-[bounce_5s_infinite] hover:animate-none
+}

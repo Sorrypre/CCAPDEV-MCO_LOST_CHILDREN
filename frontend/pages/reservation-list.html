@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="../styles/tailwind.css" />
   </head>
 
-  <body id="page">
+  <body id="page" class="reservation-list-background">
     <div id="top">
-      <button type="button" onclick="toggleNav()" class="hamburger-icon"></button>
+      <button type="button" class="hamburger-icon" id="hamburger-btn"></button>
       <div class="trademark">
         <span class="landmass"></span>
         <span class="landmass-subtext"></span>
@@ -28,14 +28,35 @@
         <a>Log Out</a>
       </div>
 
+      <div id="filter-area">
+        <span id="text-filter">Filter Settings</span>
+        <div id="filter-date">
+          <button class="filter-date-btns" id="filter-all">All</button>
+          <button class="filter-date-btns" id="filter-today">Today</button>
+          <button class="filter-date-btns" id="filter-tomo">Tomorrow</button>
+        </div>
+
+        <div id="filter-time">
+          <label for="filter-time-start">Start Time</label>
+          <input type="time" id="filter-time-start" name="filter-time-start">
+          <label for="filter-time-end">End Time</label>
+          <input type="time" id="filter-time-end" name="filter-time-end">
+        </div>
+
+        <div  id="filter-save-close">
+          <button class="filter-btns" id="filter-close-btn">Close</button>
+          <button class="filter-btns" id="filter-save-btn">Save</button>
+        </div>
+      </div>
+
       <div id="reserve-list-main"> <!--flexbox col-->
         <div class="right-most-btn"> <!--fb col 1-->
-          <button id="back-to-menu-btn">Back</button>
+          <button class="reserve-list-btn" id="back-to-menu-btn">Back</button>
         </div>
 
         <div class="reserve-view-edit">  <!--fb col 2-->
-          <button id="edit-btn">Edit</button>
-          <button id="filter-btn">Filter</button>
+          <button class="reserve-list-btn" id="filter-btn">Filter</button>
+          <button class="reserve-list-btn" id="edit-btn">Edit</button>
         </div>
 
         <div class="reserve-list-card">  <!--fb col 3-->
@@ -45,9 +66,9 @@
         </div>
 
         <div class="reserve-list-navigation">  <!--fb col 4-->
-          <button class="reserve-navi-btn" id="next-btn">&#8617;</button>
+          <button class="reserve-list-btn" id="next-btn">&#8617;</button>
           <p id="reserve-no"></p>
-          <button class="reserve-navi-btn" id="back-btn">&#8618;</button>
+          <button class="reserve-list-btn" id="back-btn">&#8618;</button>
         </div>
 
         <div> <!--fb col 5-->

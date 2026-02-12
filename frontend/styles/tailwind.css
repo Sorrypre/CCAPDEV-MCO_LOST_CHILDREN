@@ -1332,19 +1332,27 @@
 #reserve-list-main {
   display: flex;
   width: 100%;
+  flex-grow: 1;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   row-gap: calc(var(--spacing) * 4);
-  border-radius: var(--radius-2xl);
   background-color: color-mix(in srgb, oklch(37.3% 0.034 259.733) 40%, transparent);
   @supports (color: color-mix(in lab, red, red)) {
     background-color: color-mix(in oklab, var(--color-gray-700) 40%, transparent);
   }
 }
+.reserve-list-main div p {
+  font-family: var(--font-grotesk);
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+}
 .reserve-list-card {
+  height: calc(2/3 * 100%);
   width: calc(2/3 * 100%);
-  flex: auto;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-2xl);
@@ -1352,13 +1360,18 @@
   padding: calc(var(--spacing) * 2);
 }
 .right-most-btn {
+  margin-right: calc(var(--spacing) * 5);
   margin-left: auto;
   display: flex;
-  padding: calc(var(--spacing) * 2);
+  padding: calc(var(--spacing) * 4);
 }
 .reserve-view-edit {
+  display: flex;
   width: calc(2/3 * 100%);
-  flex: auto;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-items: start;
+  column-gap: calc(var(--spacing) * 10);
   padding: calc(var(--spacing) * 2);
 }
 .reserve-list-navigation {
@@ -1370,8 +1383,55 @@
   column-gap: calc(var(--spacing) * 4);
   padding: calc(var(--spacing) * 2);
 }
-.reserve-navi-btn {
-  width: calc(1/8 * 100%);
+.reserve-list-btn {
+  border-radius: var(--radius-xl);
+  background-color: var(--color-white);
+  padding: calc(var(--spacing) * 3);
+  font-family: var(--font-dmsans);
+  font-size: 16px;
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: #364156;
+  &:hover {
+    @media (hover: hover) {
+      background-color: #364156;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-white);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+    }
+  }
+}
+.filter-area {
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: calc(var(--spacing) * 4);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 500ms;
+  transition-duration: 500ms;
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
+  border-radius: var(--radius-2xl);
+  background-color: #212D40;
+}
+.filter-date-btns {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: calc(var(--spacing) * 4);
 }
 .login-background {
   background-image: url('../assets/images/bg-login.png');
@@ -1379,6 +1439,10 @@
 }
 .dashboard-background {
   background-image: url('../assets/images/bg-dashboard.jpg');
+  background-size: cover;
+}
+.reservation-list-background {
+  background-image: url('../assets/images/bg-reservation-list.jpg');
   background-size: cover;
 }
 #page {
@@ -1481,6 +1545,7 @@
 }
 .content-area {
   display: flex;
+  height: calc(100vh - 85px);
   width: 100%;
 }
 .side-nav {
@@ -1491,17 +1556,23 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  row-gap: calc(var(--spacing) * 4);
+  row-gap: calc(var(--spacing) * 8);
   overflow: hidden;
-  background-color: color-mix(in srgb, oklch(27.8% 0.033 256.848) 40%, transparent);
-  @supports (color: color-mix(in lab, red, red)) {
-    background-color: color-mix(in oklab, var(--color-gray-800) 40%, transparent);
-  }
+  background-color: color-mix(in oklab, #11151C 70%, transparent);
   padding-top: calc(var(--spacing) * 4);
-  --tw-duration: 500ms;
-  transition-duration: 500ms;
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
   --tw-ease: var(--ease-in-out);
   transition-timing-function: var(--ease-in-out);
+}
+.side-nav a {
+  padding-left: calc(var(--spacing) * 4);
+  font-family: var(--font-grotesk);
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
 }
 @property --tw-rotate-x {
   syntax: "*";

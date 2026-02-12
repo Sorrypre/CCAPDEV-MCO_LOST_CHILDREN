@@ -8,16 +8,28 @@
     @apply w-full gap-y-4 flex flex-col flex-grow items-center;
 }
 
-#filter-date {
+#text-filter {
+    @apply p-4 text-white text-2xl font-bold font-grotesk;
+}
 
+#filter-area {
+    @apply  fixed invisible overflow-hidden flex flex-col gap-y-4 z-50 max-w-full justify-start items-start;
+    @apply  bg-[#212D40]/100 rounded-b-2xl;
+    @apply  duration-500 ease-in-out;
+}
+
+#filter-date {
+    @apply p-4 ml-2 bg-[#364156ff] flex flex-row gap-x-4 justify-center items-center rounded-2xl;
+    @apply text-white font-grotesk;
 }
 
 #filter-time {
-
+    @apply p-4 flex flex-row gap-x-4 justify-center items-center;
+    @apply text-white font-grotesk;
 }
 
-#filter-save-btn {
-
+#filter-save-close {
+    @apply p-4 ml-auto mb-2 mr-2 flex gap-x-4 justify-center items-center;
 }
 
 .reserve-list-main div p {
@@ -45,11 +57,14 @@
     @apply hover:cursor-pointer;
 }
 
-.filter-area {
-    @apply  hidden flex-col gap-y-4 z-10 justify-center items-center transition-all duration-500 ease-in-out;
-    @apply  bg-[#212D40] rounded-2xl;
+.filter-date-btns {
+    @apply p-2 bg-[#212D40] w-full flex flex-row gap-x-4 justify-center items-center rounded-2xl;
+    @apply hover:bg-[#fff] hover:text-[#364156ff];
+    @apply hover:cursor-pointer;
 }
 
-.filter-date-btns {
-    @apply w-full flex flex-row gap-x-4 justify-center items-center;
+.filter-btns {
+    @apply p-2 gap-x-4 text-white font-bold bg-[#364156ff] font-dmsans rounded-2xl;
+    @apply hover:bg-[#fff] hover:text-[#364156ff];
+    @apply hover:cursor-pointer;
 }

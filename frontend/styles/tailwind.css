@@ -275,12 +275,6 @@
   .max-w-\[700px\] {
     max-width: 700px;
   }
-  .flex-shrink {
-    flex-shrink: 1;
-  }
-  .flex-grow {
-    flex-grow: 1;
-  }
   .border-collapse {
     border-collapse: collapse;
   }
@@ -338,9 +332,6 @@
   }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
-  }
-  .bg-gray-700 {
-    background-color: var(--color-gray-700);
   }
   .bg-gray-700\/40 {
     background-color: color-mix(in srgb, oklch(37.3% 0.034 259.733) 40%, transparent);
@@ -1648,6 +1639,10 @@
 }
 .dlsuBuildings-background {
   background-image: url('../assets/images/bg-dlsuBuildings.jpg');
+  background-size: cover;
+}
+.reservation-list-background {
+  background-image: url('../assets/images/bg-reservation-list.jpg');
   background-size: cover;
 }
 #page {

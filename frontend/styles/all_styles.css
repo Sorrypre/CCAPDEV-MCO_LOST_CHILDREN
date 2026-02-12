@@ -57,6 +57,10 @@
 	@apply bg-cover bg-[url('../assets/images/bg-dlsuBuildings.jpg')];
 }
 
+.reservation-list-background {
+	@apply bg-cover bg-[url('../assets/images/bg-reservation-list.jpg')];
+}
+
 /* GENERAL CONFIG */
 
 #page {

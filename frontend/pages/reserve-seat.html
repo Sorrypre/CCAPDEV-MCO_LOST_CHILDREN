@@ -86,12 +86,12 @@
                         <div class="cis"></div>
                     </div>
                     <div id="submit-container">
-                        <button class="submit-btn">Submit</button>
+                        <button onclick="openModal()" class="submit-btn">Submit</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="confirm-modal">
+        <div id="confirm-modal" class="hidden">
             <div id="confirm-modal-area">
                 <h2>Confimation</h2>
                 <p id="modal-details">
@@ -103,7 +103,7 @@
                 </p>
                 <div class="dialog-buttons">
                     <button class="confirm-btn">Confirm</button>
-                    <button class="cancel-btn">Cancel</button>
+                    <button onclick="closeModal()" class="cancel-btn">Cancel</button>
                 </div>
             </div>
         </div>
@@ -117,6 +117,19 @@
             }
 
         });
+        
+        const modal = document.getElementById('confirm-modal');
+
+        function openModal() {
+            console.log('open')
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
     </script>
     </body>
 </html>

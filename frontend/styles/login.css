@@ -3,7 +3,7 @@
 /* LOGIN */
 
 form {
-	@apply transition-discrete duration-300;
+	@apply transition-discrete duration-200;
 }
 
 label {
@@ -11,7 +11,7 @@ label {
 }
 
 input {
-	@apply p-2 text-[15px] md:w-[30em] bg-white text-base md:max-lg:text-lg xl:text-xl font-smono rounded-2xl;
+	@apply p-2 text-[15px] w-full bg-white text-base md:max-lg:text-lg xl:text-xl font-smono rounded-2xl;
 }
 
 button {
@@ -19,7 +19,7 @@ button {
 }
 
 #index-content {
-	@apply mt-10 flex flex-col justify-center items-center;
+	@apply mt-10 flex flex-col justify-center items-center gap-y-2;
 }
 
 #index-forms {
@@ -27,7 +27,7 @@ button {
 }
 
 #login, #register {
-	@apply p-6 bg-gray-700/40 max-w-[700px] rounded-2xl flex flex-wrap justify-center;
+	@apply p-6 bg-gray-700/40 max-w-[700px] rounded-2xl flex flex-wrap justify-center gap-y-2;
 }
 
 #register {
@@ -51,7 +51,7 @@ button {
 }
 
 .login-entry {
-	@apply max-w-[600px];
+	@apply pl-4 pr-4 w-full;
 }
 
 .login-button-text {

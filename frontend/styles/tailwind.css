@@ -785,8 +785,8 @@
 @layer utilities;
 form {
   transition-behavior: allow-discrete;
-  --tw-duration: 300ms;
-  transition-duration: 300ms;
+  --tw-duration: 200ms;
+  transition-duration: 200ms;
 }
 label {
   width: 100%;
@@ -798,6 +798,7 @@ label {
   }
 }
 input {
+  width: 100%;
   border-radius: var(--radius-2xl);
   background-color: var(--color-white);
   padding: calc(var(--spacing) * 2);
@@ -805,9 +806,6 @@ input {
   font-size: var(--text-base);
   line-height: var(--tw-leading, var(--text-base--line-height));
   font-size: 15px;
-  @media (width >= 48rem) {
-    width: 30em;
-  }
   @media (width >= 48rem) {
     @media (width < 64rem) {
       font-size: var(--text-lg);
@@ -839,6 +837,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  row-gap: calc(var(--spacing) * 2);
 }
 #index-forms {
   display: flex;
@@ -849,6 +848,7 @@ button {
   max-width: 700px;
   flex-wrap: wrap;
   justify-content: center;
+  row-gap: calc(var(--spacing) * 2);
   border-radius: var(--radius-2xl);
   background-color: color-mix(in srgb, oklch(37.3% 0.034 259.733) 40%, transparent);
   @supports (color: color-mix(in lab, red, red)) {
@@ -904,7 +904,9 @@ button {
   }
 }
 .login-entry {
-  max-width: 600px;
+  width: 100%;
+  padding-right: calc(var(--spacing) * 4);
+  padding-left: calc(var(--spacing) * 4);
 }
 .login-button-text {
   font-family: var(--font-dmsans);

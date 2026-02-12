@@ -2,16 +2,8 @@
 
 /* LOGIN */
 
-#index-content {
-	@apply mt-10 flex flex-col justify-center items-center;
-}
-
-#login, #register {
-	@apply p-6 bg-gray-700/40 max-w-[700px] rounded-2xl flex flex-wrap justify-center;
-}
-
-#register {
-	@apply hidden;
+form {
+	@apply transition-discrete duration-300;
 }
 
 label {
@@ -20,6 +12,26 @@ label {
 
 input {
 	@apply p-2 text-[15px] md:w-[30em] bg-white text-base md:max-lg:text-lg xl:text-xl font-smono rounded-2xl;
+}
+
+button {
+	@apply cursor-pointer transition duration-350 hover:brightness-175;
+}
+
+#index-content {
+	@apply mt-10 flex flex-col justify-center items-center;
+}
+
+#index-forms {
+	@apply flex flex-row;
+}
+
+#login, #register {
+	@apply p-6 bg-gray-700/40 max-w-[700px] rounded-2xl flex flex-wrap justify-center;
+}
+
+#register {
+	@apply hidden;
 }
 
 #login-submit-login {

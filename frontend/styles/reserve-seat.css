@@ -73,13 +73,13 @@ body{
 @media (hover:hover) and (pointer:fine){
 #slots-container .seat:not(.taken):hover{
   transform:scale(1.05);
-  @apply bg-[#5d5d81] cursor-pointer
+  @apply bg-[#5d5d81] cursor-pointer transition
 }
 }
 .cis{
     /* @apply h-6 w-6 rounded-t-sm m-[8px] bg-transparent; */
     /* @apply md:h-10 md:w-10 rounded-t-lg md:m-[10px] bg-transparent; */
-    @apply bg-transparent
+    @apply bg-transparent;
 }
 .space{
     @apply h-[12px] w-[12px]
@@ -105,7 +105,7 @@ body{
 
 
 #confirm-modal{
-    @apply p-10 fixed inset-0 z-[100] hidden items-center justify-center;
+    @apply p-10 fixed inset-0 z-[100] h-full w-full hidden items-center justify-center;
 }
 .hidden {
     display: none !important;
@@ -115,7 +115,7 @@ body{
     display: flex !important;
 }
 #confirm-modal-area{
-    @apply bg-gray-800 rounded-xl w-full;
+    @apply bg-gray-800 rounded-xl w-lg h-auto ;
     /* @apply max-w-d */
 }
 
@@ -132,7 +132,7 @@ body{
 }
 
 .confirm-btn{
-    @apply w-full bg-[#5d5d81] text-white font-bold
+    @apply w-full bg-[#5d5d81] text-white
 }
 
 .cancel-btn{

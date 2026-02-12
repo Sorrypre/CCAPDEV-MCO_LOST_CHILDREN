@@ -826,12 +826,12 @@
   }
 }
 @layer utilities;
-form {
+.login form {
   transition-behavior: allow-discrete;
-  --tw-duration: 300ms;
-  transition-duration: 300ms;
+  --tw-duration: 200ms;
+  transition-duration: 200ms;
 }
-label {
+.login label {
   width: 100%;
   font-family: var(--font-inter);
   font-size: 15px;
@@ -840,7 +840,8 @@ label {
     font-size: 30px;
   }
 }
-input {
+.login input {
+  width: 100%;
   border-radius: var(--radius-2xl);
   background-color: var(--color-white);
   padding: calc(var(--spacing) * 2);
@@ -848,9 +849,6 @@ input {
   font-size: var(--text-base);
   line-height: var(--tw-leading, var(--text-base--line-height));
   font-size: 15px;
-  @media (width >= 48rem) {
-    width: 30em;
-  }
   @media (width >= 48rem) {
     @media (width < 64rem) {
       font-size: var(--text-lg);
@@ -862,7 +860,7 @@ input {
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
 }
-button {
+.login button {
   cursor: pointer;
   transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
   transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -882,6 +880,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  row-gap: calc(var(--spacing) * 2);
 }
 #index-forms {
   display: flex;
@@ -892,6 +891,7 @@ button {
   max-width: 700px;
   flex-wrap: wrap;
   justify-content: center;
+  row-gap: calc(var(--spacing) * 2);
   border-radius: var(--radius-2xl);
   background-color: color-mix(in srgb, oklch(37.3% 0.034 259.733) 40%, transparent);
   @supports (color: color-mix(in lab, red, red)) {
@@ -947,7 +947,9 @@ button {
   }
 }
 .login-entry {
-  max-width: 600px;
+  width: 100%;
+  padding-right: calc(var(--spacing) * 4);
+  padding-left: calc(var(--spacing) * 4);
 }
 .login-button-text {
   font-family: var(--font-dmsans);
@@ -2564,6 +2566,26 @@ body {
 #hamburger-btn {
   margin-bottom: calc(var(--spacing) * 2);
   margin-left: calc(var(--spacing) * 4);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 200ms;
+  transition-duration: 200ms;
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-white);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-black);
+    }
+  }
 }
 .wrap-spacer {
   width: 100%;
@@ -2697,6 +2719,9 @@ body {
   transition-duration: 500ms;
   --tw-ease: var(--ease-in-out);
   transition-timing-function: var(--ease-in-out);
+}
+.login.side-nav a:not(.login-visible) {
+  display: none;
 }
 .content {
   margin-top: calc(var(--spacing) * 10);

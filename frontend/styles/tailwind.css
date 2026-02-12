@@ -941,6 +941,9 @@ input {
     font-size: 50px;
   }
 }
+.tab-hidden {
+  display: none;
+}
 @layer theme, base, components, utilities;
 @layer theme;
 @layer base {

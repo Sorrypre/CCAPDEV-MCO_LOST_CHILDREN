@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+#settings-content {
+	@apply mt-10 flex flex-col justify-center items-center;
+}
+
+
+#settings-content span{
+	@apply font-grotesk pt-7 text-3xl md:text-8xl text-white font-bold justify-self-center after:content-['ACCOUNT_SETTINGS'];
+}

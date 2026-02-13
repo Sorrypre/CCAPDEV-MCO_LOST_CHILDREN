@@ -13,7 +13,7 @@
 }
 
 #dashboard-content-menu-area {
-	@apply p-4 flex flex-wrap justify-center items-stretch gap-12;
+	@apply p-4 mt-10 flex flex-wrap justify-center items-stretch gap-12;
 }
 
 .dashboard-card {
@@ -36,5 +36,5 @@
 }
 
 .dashboard-card-content {
-	@apply text-justify text-xs md:text-base leading-[2em] md:leading-[1.5rem] min-h-[10.25em] md:min-h-[9em];
+	@apply text-justify text-base md:text-lg leading-[2em];
 }

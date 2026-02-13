@@ -32,5 +32,5 @@ mopt_account.addEventListener('click', async function() {
 	if (await isServer())
 		window.location.href = '/account_settings';
 	else
-		window.location.href = './account-settings.html';
+		window.location.href = './settings.html';
 });

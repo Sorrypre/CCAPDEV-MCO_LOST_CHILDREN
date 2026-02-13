@@ -7,7 +7,7 @@ xjr.post('/lu', (q, r) => {
 	const lu = q.body['login-username'];
 	const lp = q.body['login-password'];
 	/*console.log('login attempted: ' + lu + ' ' + lp);*/
-	r.send('under construction');
+	r.redirect('/frontend/pages/dashboard.html');
 });
 
 xjr.post('/ru', (q, r) => {

@@ -50,8 +50,12 @@
 	@apply p-3 w-full bg-gray-800 rounded-xl after:content-['Back_to_Login'];
 }
 
-.register-invalid, .login-invalid {
-	@apply font-inter text-red-300 hidden;
+.register-invalid {
+	@apply font-inter text-green-300 hidden;
+}
+
+.login-invalid {
+	@apply font-inter text-blue-300 hidden;
 }
 
 .register-invalid.username-empty, .login-invalid.username-empty {

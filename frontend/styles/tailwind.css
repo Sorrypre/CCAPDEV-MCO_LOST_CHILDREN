@@ -7,9 +7,10 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-300: oklch(80.8% 0.114 19.571);
     --color-yellow-600: oklch(68.1% 0.162 75.834);
+    --color-green-300: oklch(87.1% 0.15 154.449);
     --color-green-700: oklch(52.7% 0.154 150.069);
+    --color-blue-300: oklch(80.9% 0.105 251.813);
     --color-blue-700: oklch(48.8% 0.243 264.376);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-400: oklch(70.7% 0.022 261.325);
@@ -949,10 +950,15 @@
     content: var(--tw-content);
   }
 }
-.register-invalid, .login-invalid {
+.register-invalid {
   display: none;
   font-family: var(--font-inter);
-  color: var(--color-red-300);
+  color: var(--color-green-300);
+}
+.login-invalid {
+  display: none;
+  font-family: var(--font-inter);
+  color: var(--color-blue-300);
 }
 .register-invalid.username-empty, .login-invalid.username-empty {
   &::after {

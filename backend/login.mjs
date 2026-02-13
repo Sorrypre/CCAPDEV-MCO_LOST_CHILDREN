@@ -6,7 +6,7 @@ const xjr = express.Router();
 xjr.post('/lu', (q, r) => {
 	const lu = q.body['login-username'];
 	const lp = q.body['login-password'];
-	console.log('login attempted: ' + lu + ' ' + lp);
+	/*console.log('login attempted: ' + lu + ' ' + lp);*/
 	r.send('under construction');
 });
 

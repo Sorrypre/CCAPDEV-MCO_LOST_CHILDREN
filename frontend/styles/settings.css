@@ -1,10 +1,74 @@
 @import "tailwindcss";
 
-#settings-content {
+.body {
+    @apply bg-no-repeat;
+}
+
+/* Main content container */
+.main-settings-content {
+	@apply text-white font-grotesk;
+	@apply p-4 gap-10 flex-col flex md:flex-row items-start w-full h-screen px-6 ;
+	@apply items-center;
+}
+/* For the profile content */
+.profile-info-content {
+	@apply flex flex-col w-full md:w-1/4
+}
+
+.profile-card {
+	@apply bg-[#7070a1] mb-2 p-4 w-full;
+	@apply rounded-md;
+}
+/* For the Collapsable Menu */
+.collapsable-menu-content {
+	@apply flex flex-col w-full gap-y-4 overflow-auto
+}
+/* The container of the collapse button */
+.collapsible-area {
+	@apply font-bold;
+	@apply flex flex-row justify-between items-center w-full;
+	@apply bg-[#7070a1] hover:bg-[#5d5d81] mb-2 p-4;
+	@apply rounded-md;
+	@apply cursor-pointer;
+}
+/* Collapsable button */
+/* .collapsible {
+	@apply flex flex-row hover:cursor-pointer p-4 w-full text-left outline-0 justify-between items-center;
+	@apply bg-[#7070a1] hover:bg-[#5d5d81] mb-4
+	@apply rounded-md
+} */
+#profilepic{
+	@apply pb-5 md:w-[130px] md:h-[150px]
+}
+.profile-name{
+	@apply text-2xl text-center;
+	@apply pb-5 overflow-hidden;
+}
+.profile-info{
+	@apply pl-2 overflow-hidden
+}
+
+.profile-content{
+	@apply bg-gray-800 rounded-md p-2
+}
+.photo-holder{
+	@apply flex items-center justify-center
+}
+#settings-text {
+	@apply font-grotesk pb-2 text-3xl md:text-4xl text-white font-bold justify-self-center after:content-['ACCOUNT_SETTINGS'];
+}
+.collapsible-content {
+	padding: 0 18px;
+  	max-height: 0;
+  	overflow: hidden;
+  	transition: max-height 0.2s ease-out;
+  	background-color: #f1f1f1;
+}
+/* .main-settings-content {
 	@apply mt-10 flex flex-col justify-center items-center;
-}
+} */
 
 
-#settings-content span{
-	@apply font-grotesk pt-7 text-3xl md:text-8xl text-white font-bold justify-self-center after:content-['ACCOUNT_SETTINGS'];
-}
+/* #settings-content span{
+	@apply font-grotesk pt-7 text-8xl md:text-6xl text-white font-bold justify-self-center after:content-['ACCOUNT_SETTINGS'];
+} */

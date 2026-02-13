@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/tailwind.css" />
+  </head>
+
+  <body id="page" class="dlsuBuildings-background">
+		<div id="top">
+			<!--<img class="hamburger-icon" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg" />-->
+			<!--<button type="button" onclick="toggleNav()" class="hamburger-icon"></button>-->
+			<span id="hamburger-btn" class="hamburger-icon"></span>
+			<div class="trademark">
+				<span class="landmass"></span>
+				<span class="landmass-subtext"></span>
+			</div>
+			<div class="profile-bubble">
+				<!-- PROFILE -->
+			</div>
+		</div>
+    <div class="content-area">
+      <div id="in-side-nav" class="side-nav">
+        <button type="button" id="redir-dashboard" class="side-nav-button"></button>
+        <button type="button" id="redir-reserve-seats" class="side-nav-button"></button>
+        <button type="button" id="redir-see-reservations" class="side-nav-button"></button>
+        <button type="button" id="redir-account-settings" class="side-nav-button"></button>
+        <button type="button" id="redir-contact-us" class="side-nav-button"></button>
+        <button type="button" id="redir-log-out" class="side-nav-button"></button>
+		  </div>
+      <div class="main-settings-content">
+        <div class="profile-info-content">
+          <div class="profile-card">
+            <div class="photo-holder"> 
+              <img id="profilepic" src="../assets/images/profile-pic-placeholder.png">
+            </div>
+            <div class="profile-content">
+              <div class="profile-name">
+                <p>Kurt Anjo Laguerta</p>
+              </div>
+              <div class="profile-info">
+                <p>Description: I am a pro at CCAPDEV</p>
+                <p>Email: kurt_laguerta@dlsu.edu.ph</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="collapsable-menu-content">
+          <span id="settings-text"></span>
+          <div class="collapsible-area">
+            <button type="button" class="collapsible">Edit Profile</button>
+            <span>+</span>
+            <!-- <div class="collapsible-content"> 
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus molestiae mollitia in corporis ratione necessitatibus dolores atque itaque quas aliquam cumque, impedit repellendus et velit sequi molestias nam natus architecto?</p>
+            </div> -->
+          </div>
+          <div class="collapsible-area">
+            <button type="button" class="collapsible">Find Other Users</button>
+            <span>+</span>
+            <!-- <div class="collapsible-content"> 
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus molestiae mollitia in corporis ratione necessitatibus dolores atque itaque quas aliquam cumque, impedit repellendus et velit sequi molestias nam natus architecto?</p>
+            </div> -->
+          </div>
+          <div class="collapsible-area">
+            <button type="button" class="collapsible">Delete Account</button>
+            <span>+</span>
+            <!-- <div class="collapsible-content"> 
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus molestiae mollitia in corporis ratione necessitatibus dolores atque itaque quas aliquam cumque, impedit repellendus et velit sequi molestias nam natus architecto?</p>
+            </div> -->
+          </div>
+          
+        </div>
+
+        </div>
+      </div>
+    </div>
+    
+        <script>
+          // let collapsibleElems = document.getElementsByClassName("collapsible");
+          
+          // for (let i = 0; i < collapsibleElems.length; i++) {
+          //   collapsibleElems[i].addEventListener("click", function() {
+
+
+          //     let collapsContent = this.nextElementSibling;
+
+          //     // if (collapsContent.style.display === "block") {
+          //     //   collapsContent.style.display = "none";
+          //     // } else {
+          //     //   collapsContent.style.display = "block";
+          //     // }
+          // if (collapsContent.style.maxHeight) {
+          //   collapsContent.style.maxHeight = null;
+          // } else {
+          //   collapsContent.style.height = collapsContent.scrollHeight + "px";
+          // }
+          //   });
+          // }
+        </script>
+        <script src="../../backend/main.js"> </script>
+        <script type="application/javascript" src="../../backend/sidebar.js"></script>
+    </body>
+</html>

@@ -75,6 +75,8 @@
 
 #hamburger-btn {
 	@apply ml-4 mb-2;
+	@apply transition duration-200;
+	@apply hover:bg-white hover:text-black hover:cursor-pointer;
 }
 
 .wrap-spacer {
@@ -111,6 +113,10 @@
 
 .side-nav {
 	@apply fixed overflow-hidden h-full w-0 bg-gray-800/40 flex flex-col gap-y-4 justify-start items-start pt-4 duration-500 ease-in-out;
+}
+
+.login.side-nav a:not(.login-visible) {
+	@apply hidden;
 }
 
 .content {

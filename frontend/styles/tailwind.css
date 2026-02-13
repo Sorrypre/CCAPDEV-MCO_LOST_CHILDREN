@@ -19,6 +19,7 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-2xs: 18rem;
+    --container-lg: 32rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
@@ -825,12 +826,12 @@
   }
 }
 @layer utilities;
-form {
+.login form {
   transition-behavior: allow-discrete;
-  --tw-duration: 300ms;
-  transition-duration: 300ms;
+  --tw-duration: 200ms;
+  transition-duration: 200ms;
 }
-label {
+.login label {
   width: 100%;
   font-family: var(--font-inter);
   font-size: 15px;
@@ -839,7 +840,8 @@ label {
     font-size: 30px;
   }
 }
-input {
+.login input {
+  width: 100%;
   border-radius: var(--radius-2xl);
   background-color: var(--color-white);
   padding: calc(var(--spacing) * 2);
@@ -847,9 +849,6 @@ input {
   font-size: var(--text-base);
   line-height: var(--tw-leading, var(--text-base--line-height));
   font-size: 15px;
-  @media (width >= 48rem) {
-    width: 30em;
-  }
   @media (width >= 48rem) {
     @media (width < 64rem) {
       font-size: var(--text-lg);
@@ -861,7 +860,7 @@ input {
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
 }
-button {
+.login button {
   cursor: pointer;
   transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
   transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -881,6 +880,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  row-gap: calc(var(--spacing) * 2);
 }
 #index-forms {
   display: flex;
@@ -891,6 +891,7 @@ button {
   max-width: 700px;
   flex-wrap: wrap;
   justify-content: center;
+  row-gap: calc(var(--spacing) * 2);
   border-radius: var(--radius-2xl);
   background-color: color-mix(in srgb, oklch(37.3% 0.034 259.733) 40%, transparent);
   @supports (color: color-mix(in lab, red, red)) {
@@ -946,7 +947,9 @@ button {
   }
 }
 .login-entry {
-  max-width: 600px;
+  width: 100%;
+  padding-right: calc(var(--spacing) * 4);
+  padding-left: calc(var(--spacing) * 4);
 }
 .login-button-text {
   font-family: var(--font-dmsans);
@@ -1872,10 +1875,6 @@ body {
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
-  &::after {
-    --tw-content: 'BUILDING';
-    content: var(--tw-content);
-  }
   @media (width >= 48rem) {
     font-size: var(--text-7xl);
     line-height: var(--tw-leading, var(--text-7xl--line-height));
@@ -2134,6 +2133,7 @@ body {
 .go-back-text {
   display: block;
   text-align: right;
+  cursor: pointer;
 }
 #go-back-container {
   margin-inline: auto;
@@ -2255,6 +2255,9 @@ body {
     transform: scale(1.05);
     cursor: pointer;
     background-color: #5d5d81;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
 }
 .cis {
@@ -2285,6 +2288,8 @@ body {
   inset: calc(var(--spacing) * 0);
   z-index: 100;
   display: none;
+  height: 100%;
+  width: 100%;
   align-items: center;
   justify-content: center;
   padding: calc(var(--spacing) * 10);
@@ -2296,7 +2301,8 @@ body {
   display: flex !important;
 }
 #confirm-modal-area {
-  width: 100%;
+  height: auto;
+  width: var(--container-lg);
   border-radius: var(--radius-xl);
   background-color: var(--color-gray-800);
 }
@@ -2325,8 +2331,6 @@ body {
 .confirm-btn {
   width: 100%;
   background-color: #5d5d81;
-  --tw-font-weight: var(--font-weight-bold);
-  font-weight: var(--font-weight-bold);
   color: var(--color-white);
 }
 .cancel-btn {
@@ -2617,6 +2621,26 @@ body {
 #hamburger-btn {
   margin-bottom: calc(var(--spacing) * 2);
   margin-left: calc(var(--spacing) * 4);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 200ms;
+  transition-duration: 200ms;
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-white);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-black);
+    }
+  }
 }
 .wrap-spacer {
   width: 100%;
@@ -2752,6 +2776,9 @@ body {
   transition-duration: 500ms;
   --tw-ease: var(--ease-in-out);
   transition-timing-function: var(--ease-in-out);
+}
+.login.side-nav a:not(.login-visible) {
+  display: none;
 }
 .content {
   margin-top: calc(var(--spacing) * 10);

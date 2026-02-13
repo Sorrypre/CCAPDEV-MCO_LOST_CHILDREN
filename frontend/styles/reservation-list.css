@@ -56,18 +56,27 @@
     @apply p-4 ml-auto mb-2 mr-2 flex gap-x-4 justify-center items-center;
 }
 
+#seat-name {
+    @apply ml-4 mr-auto;
+}
+
+#save-edit-btn {
+    @apply p-2 hidden bg-white text-[#212D40] font-bold font-dmsans rounded-2xl;
+    @apply hover:bg-[#212D40] hover:text-white;
+}
+
 .reserve-list-main div p {
     @apply text-white text-2xl font-bold font-grotesk;
 }
 .reserve-list-card {
-    @apply p-2 bg-[#364156ff] w-2/3 min-h-[500px] h-2/3 rounded-2xl flex-col justify-center items-center;
+    @apply p-2 bg-[#364156] w-2/3 min-h-[500px] h-2/3 rounded-2xl flex-col justify-center items-center;
 }
 
 .right-most-btn {
     @apply p-4 mr-5 flex ml-auto;
 }
 
-.reserve-view-edit {
+.reserve-view {
     @apply p-2 w-2/3 gap-x-10 flex flex-row justify-items-start items-start;
 }
 
@@ -77,18 +86,19 @@
 
 .reserve-list-btn {
     @apply p-3 bg-white text-[16px] text-[#364156] font-bold font-dmsans rounded-xl;
-    @apply hover:bg-[#364156] hover:text-white;
-    @apply hover:cursor-pointer;
+    @apply hover:bg-[#212D40] hover:text-white hover:cursor-pointer;
+    @apply focus:outline-5 focus:outline-[#212D40];
 }
 
-.filter-date-btn {
-    @apply p-2 bg-[#212D40] w-full flex flex-row gap-x-4 justify-center items-center rounded-2xl;
-    @apply hover:bg-[#fff] hover:text-[#364156ff];
-    @apply hover:cursor-pointer;
+.reservation-item {
+    @apply p-4  w-full flex flex-col gap-x-4 items-start text-white font-grotesk;
 }
 
-.filter-btn {
-    @apply p-2 gap-x-4 text-white font-bold bg-[#364156ff] font-dmsans rounded-2xl;
-    @apply hover:bg-white hover:text-[#364156ff];
-    @apply hover:cursor-pointer;
+.seat-list {
+    @apply p-2 w-full flex flex-col gap-y-4;
+}
+.seat-item {
+    @apply p-2 bg-[#212D40] w-full flex flex-row gap-x-4 rounded-2xl;
+    @apply text-white font-grotesk;
+    @apply hover:bg-white hover:text-[#364156];
 }

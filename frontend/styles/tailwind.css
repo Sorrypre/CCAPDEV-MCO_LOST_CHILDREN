@@ -1621,6 +1621,30 @@
   column-gap: calc(var(--spacing) * 4);
   padding: calc(var(--spacing) * 4);
 }
+#seat-name {
+  margin-right: auto;
+  margin-left: calc(var(--spacing) * 4);
+}
+#save-edit-btn {
+  display: none;
+  border-radius: var(--radius-2xl);
+  background-color: var(--color-white);
+  padding: calc(var(--spacing) * 2);
+  font-family: var(--font-dmsans);
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: #212D40;
+  &:hover {
+    @media (hover: hover) {
+      background-color: #212D40;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-white);
+    }
+  }
+}
 .reserve-list-main div p {
   font-family: var(--font-grotesk);
   font-size: var(--text-2xl);
@@ -1637,7 +1661,7 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-2xl);
-  background-color: #364156ff;
+  background-color: #364156;
   padding: calc(var(--spacing) * 2);
 }
 .right-most-btn {
@@ -1646,7 +1670,7 @@
   display: flex;
   padding: calc(var(--spacing) * 4);
 }
-.reserve-view-edit {
+.reserve-view {
   display: flex;
   width: calc(2/3 * 100%);
   flex-direction: row;
@@ -1675,7 +1699,12 @@
   color: #364156;
   &:hover {
     @media (hover: hover) {
-      background-color: #364156;
+      cursor: pointer;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      background-color: #212D40;
     }
   }
   &:hover {
@@ -1683,46 +1712,40 @@
       color: var(--color-white);
     }
   }
-  &:hover {
-    @media (hover: hover) {
-      cursor: pointer;
-    }
+  &:focus {
+    outline-style: var(--tw-outline-style);
+    outline-width: 5px;
+  }
+  &:focus {
+    outline-color: #212D40;
   }
 }
-.filter-date-btn {
+.reservation-item {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  column-gap: calc(var(--spacing) * 4);
+  padding: calc(var(--spacing) * 4);
+  font-family: var(--font-grotesk);
+  color: var(--color-white);
+}
+.seat-list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  row-gap: calc(var(--spacing) * 4);
+  padding: calc(var(--spacing) * 2);
+}
+.seat-item {
   display: flex;
   width: 100%;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
   column-gap: calc(var(--spacing) * 4);
   border-radius: var(--radius-2xl);
   background-color: #212D40;
   padding: calc(var(--spacing) * 2);
-  &:hover {
-    @media (hover: hover) {
-      background-color: #fff;
-    }
-  }
-  &:hover {
-    @media (hover: hover) {
-      color: #364156ff;
-    }
-  }
-  &:hover {
-    @media (hover: hover) {
-      cursor: pointer;
-    }
-  }
-}
-.filter-btn {
-  column-gap: calc(var(--spacing) * 4);
-  border-radius: var(--radius-2xl);
-  background-color: #364156ff;
-  padding: calc(var(--spacing) * 2);
-  font-family: var(--font-dmsans);
-  --tw-font-weight: var(--font-weight-bold);
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-grotesk);
   color: var(--color-white);
   &:hover {
     @media (hover: hover) {
@@ -1731,12 +1754,7 @@
   }
   &:hover {
     @media (hover: hover) {
-      color: #364156ff;
-    }
-  }
-  &:hover {
-    @media (hover: hover) {
-      cursor: pointer;
+      color: #364156;
     }
   }
 }

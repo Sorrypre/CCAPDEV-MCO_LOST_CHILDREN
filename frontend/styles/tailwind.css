@@ -1454,6 +1454,24 @@
   align-items: center;
   row-gap: calc(var(--spacing) * 4);
 }
+#filter-box {
+  position: fixed;
+  inset: calc(var(--spacing) * 0);
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--spacing) * 10);
+}
+#filter-area {
+  display: flex;
+  width: calc(1/3 * 100%);
+  flex-direction: column;
+  justify-content: center;
+  row-gap: calc(var(--spacing) * 4);
+  border-radius: var(--radius-2xl);
+  background-color: #212D40;
+}
 #text-filter {
   padding: calc(var(--spacing) * 4);
   font-family: var(--font-grotesk);
@@ -1463,27 +1481,8 @@
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
 }
-#filter-area {
-  visibility: hidden;
-  position: fixed;
-  z-index: 50;
-  display: flex;
-  max-width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  row-gap: calc(var(--spacing) * 4);
-  overflow: hidden;
-  border-bottom-right-radius: var(--radius-2xl);
-  border-bottom-left-radius: var(--radius-2xl);
-  background-color: #212D40;
-  --tw-duration: 500ms;
-  transition-duration: 500ms;
-  --tw-ease: var(--ease-in-out);
-  transition-timing-function: var(--ease-in-out);
-}
 #filter-date {
-  margin-left: calc(var(--spacing) * 2);
+  margin: calc(var(--spacing) * 4);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1495,15 +1494,71 @@
   font-family: var(--font-grotesk);
   color: var(--color-white);
 }
-#filter-time {
+#filter-building {
+  margin: calc(var(--spacing) * 4);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   column-gap: calc(var(--spacing) * 4);
+  border-radius: var(--radius-2xl);
+  background-color: #364156ff;
   padding: calc(var(--spacing) * 4);
   font-family: var(--font-grotesk);
   color: var(--color-white);
+}
+#filter-building-select {
+  border-radius: var(--radius-xl);
+  background-color: var(--color-white);
+  padding: calc(var(--spacing) * 2);
+  font-family: var(--font-dmsans);
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: #364156ff;
+}
+#filter-room {
+  margin: calc(var(--spacing) * 4);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: calc(var(--spacing) * 4);
+  border-radius: var(--radius-2xl);
+  background-color: #364156ff;
+  padding: calc(var(--spacing) * 4);
+  font-family: var(--font-grotesk);
+  color: var(--color-white);
+}
+#filter-room-select {
+  border-radius: var(--radius-xl);
+  background-color: var(--color-white);
+  padding: calc(var(--spacing) * 2);
+  font-family: var(--font-dmsans);
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: #364156ff;
+}
+#filter-time {
+  margin: calc(var(--spacing) * 4);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: calc(var(--spacing) * 4);
+  border-radius: var(--radius-2xl);
+  background-color: #364156ff;
+  padding: calc(var(--spacing) * 4);
+  font-family: var(--font-grotesk);
+  color: var(--color-white);
+}
+#filter-time-select {
+  border-radius: var(--radius-xl);
+  background-color: var(--color-white);
+  padding: calc(var(--spacing) * 2);
+  font-family: var(--font-dmsans);
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: #364156ff;
 }
 #filter-save-close {
   margin-right: calc(var(--spacing) * 2);
@@ -1583,7 +1638,7 @@
     }
   }
 }
-.filter-date-btns {
+.filter-date-btn {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -1609,7 +1664,7 @@
     }
   }
 }
-.filter-btns {
+.filter-btn {
   column-gap: calc(var(--spacing) * 4);
   border-radius: var(--radius-2xl);
   background-color: #364156ff;
@@ -1620,7 +1675,7 @@
   color: var(--color-white);
   &:hover {
     @media (hover: hover) {
-      background-color: #fff;
+      background-color: var(--color-white);
     }
   }
   &:hover {
@@ -2591,6 +2646,8 @@ body {
   width: 100%;
 }
 .hamburger-icon {
+  margin: calc(var(--spacing) * 4);
+  padding-bottom: calc(var(--spacing) * 4);
   font-size: var(--text-4xl);
   line-height: var(--tw-leading, var(--text-4xl--line-height));
   --tw-font-weight: var(--font-weight-bold);

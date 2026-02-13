@@ -1890,6 +1890,9 @@
   }
 }
 @layer utilities;
+.body {
+  overflow: hidden;
+}
 .reservation-room .reserve-bldg-text, .go-back-text, .reserve-bldg-text, #available-text-container p, #date-time-selection input, #date-time-selection select , .room-container div, .room-container span {
   font-family: var(--font-grotesk);
   color: var(--color-white);
@@ -1900,6 +1903,7 @@
 .go-back-text {
   display: block;
   text-align: right;
+  cursor: pointer;
 }
 #go-back-container {
   margin-inline: auto;
@@ -1936,13 +1940,12 @@
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
 }
-#content-rooms {
+#content {
   margin-top: calc(var(--spacing) * 10);
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
 }
 #content-area-rooms {
   display: flex;

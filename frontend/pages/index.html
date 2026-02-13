@@ -36,18 +36,20 @@
 							<label for="login-username">Username</label>
 							<div class="wrap-spacer"></div>
 							<input type="text" name="login-username" id="login-username" />
+							<span id="login-username-status" class="login-invalid"></span>
 						</div>
 						<div class="wrap-spacer"></div>
 						<div class="login-entry">
 							<label for="login-password">Password</label>
 							<div class="wrap-spacer"></div>
 							<input type="password" name="login-password" id="login-password" />
+							<span id="login-password-status" class="login-invalid"></span>
 						</div>
 						<div class="wrap-spacer"></div>
 						<div class="login-buttons-area">
-							<button type="submit" name="login-submit-login" id="login-submit-login" class="login-button-text"></button>
+							<button type="button" id="login-submit-login" class="login-button-text"></button>
 							<div class="wrap-spacer"></div>
-							<button type="button" name="login-register" id="login-register" class="login-button-text"></button>
+							<button type="button" id="login-register" class="login-button-text"></button>
 						</div>
 					</form>
 					<form id="register" action="/ru" method="post">
@@ -55,29 +57,32 @@
 							<label for="register-username">Username</label>
 							<div class="wrap-spacer"></div>
 							<input type="text" name="register-username" id="register-username" />
+							<span id="register-username-status" class="register-invalid"></span>
 						</div>
 						<div class="wrap-spacer"></div>
 						<div class="login-entry">
 							<label for="register-password">Password</label>
 							<div class="wrap-spacer"></div>
 							<input type="password" name="register-password" id="register-password" />
+							<span id="register-password-status" class="register-invalid"></span>
 						</div>
 						<div class="login-entry">
 							<label for="register-confirm-password">Confirm Password</label>
 							<div class="wrap-spacer"></div>
 							<input type="password" name="register-confirm-password" id="register-confirm-password" />
+							<span id="register-confirm-status" class="register-invalid"></span>
 						</div>
 						<div class="wrap-spacer"></div>
 						<div class="register-buttons-area">
-							<button type="submit" name="register-new-user" id="register-new-user" class="login-button-text"></button>
+							<button type="button" id="register-new-user" class="login-button-text"></button>
 							<div class="wrap-spacer"></div>
-							<button type="button" name="register-cancel" id="register-cancel" class="login-button-text"></button>
+							<button type="button" id="register-cancel" class="login-button-text"></button>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
-		<script type="application/javascript" src="/backend/index.js"></script>
-		<script type="application/javascript" src="/backend/main.js"></script>
+		<script type="application/javascript" src="../../backend/index.js"></script>
+		<script type="application/javascript" src="../../backend/main.js"></script>
 	</body>
 </html>

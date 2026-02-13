@@ -10,14 +10,15 @@ xjr.post('/lu', (q, r) => {
 	r.send('under construction');
 });
 
-xjr.post('/ru', [
-	
-], (q, r) => {
+xjr.post('/ru', (q, r) => {
 	const ru = q.body['register-username'];
 	const rp = q.body['register-password'];
 	const rc = q.body['register-confirm-password'];
 	if (rp !== rc)
-		r.status(422).send('no redirect');
+		r.json({
+			success: false,
+			message: 'password not confirmed'
+		});
 	else
 		r.send('under construction');
 });

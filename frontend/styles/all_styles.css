@@ -113,7 +113,7 @@
 
 /* SIDEBAR */
 .side-nav {
-	@apply bg-black/70 w-0 pt-4 h-full fixed overflow-hidden flex flex-col justify-start items-start gap-y-1;
+	@apply bg-black/70 w-0 pt-4 h-full z-[100] fixed overflow-hidden flex flex-col justify-start items-start gap-y-1;
 	@apply duration-300 ease-out;
 }
 

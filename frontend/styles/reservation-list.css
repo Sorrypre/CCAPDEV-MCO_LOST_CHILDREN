@@ -8,6 +8,10 @@
     @apply w-full gap-y-4 flex flex-col flex-grow items-center;
 }
 
+#reservation-list {
+    @apply relative w-full min-h-[460px] h-3/4;
+}
+
 #filter-box {
     @apply fixed inset-0 z-[100] hidden items-center justify-center;
 }
@@ -37,7 +41,7 @@
     @apply text-white text-2xl font-bold font-grotesk;
 }
 .reserve-list-card {
-    @apply p-2 bg-[#364156] w-2/3 min-h-[400px] h-2/3 rounded-2xl flex-col justify-center items-center;
+    @apply static p-2 w-2/3 min-h-[400px] h-2/3 flex-col justify-center items-center;
 }
 
 .right-most-btn {
@@ -68,7 +72,7 @@
 }
 
 .reservation-item {
-    @apply p-4 w-full flex flex-col gap-x-4 items-start text-white font-grotesk;
+    @apply absolute bg-[#364156] p-4 w-full  flex flex-col gap-x-4 items-start text-white font-grotesk rounded-2xl;
 }
 
 .seat-list {

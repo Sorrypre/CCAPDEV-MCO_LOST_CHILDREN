@@ -82,10 +82,13 @@ function writeReservations() {
             seat_list.appendChild(seat_item);
         });
 
-        right_most_btn.appendChild(save_edit_btn);
-        reservation_list.appendChild(reservation_item);
-        reservation_list.appendChild(seat_list);
-        reservation_list.appendChild(right_most_btn);
+        if (right_most_btn)
+            right_most_btn.appendChild(save_edit_btn);
+        if (reservation_list) {
+            reservation_list.appendChild(reservation_item);
+            reservation_list.appendChild(seat_list);
+            reservation_list.appendChild(right_most_btn);
+        }
     });
 }
 

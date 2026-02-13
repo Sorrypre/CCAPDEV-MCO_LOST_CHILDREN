@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,9 +21,9 @@
       <div id="filter-area">
         <span id="text-filter">Filter Settings</span>
 
-        <div id="filter-building">
+        <div class="filter-options">
           <label for="filter-building-select">Building</label>
-          <select id="filter-building-select" name="filter-building-select">
+          <select class="filter-options-select" id="filter-building-select" name="filter-building-select">
             <option selected hidden disabled>Pick Building</option>
             <option>Henry Sy Hall</option>
             <option>Gokongwei Hall</option>
@@ -31,23 +31,23 @@
           </select>
         </div>
 
-        <div id="filter-room">
+        <div class="filter-options">
           <label for="filter-room-select">Room</label>
-          <select id="filter-room-select" name="filter-room-select">
+          <select class="filter-options-select" id="filter-room-select" name="filter-room-select">
             <option selected hidden disabled>Pick Room</option>
             <!--options are dynamic since it depends on the building-->
           </select>
         </div>
 
-        <div id="filter-date">
+        <div class="filter-options">
           <button class="reserve-list-btn" id="filter-all">All</button>
           <button class="reserve-list-btn" id="filter-today">Today</button>
           <button class="reserve-list-btn" id="filter-tomo">Tomorrow</button>
         </div>
 
-        <div id="filter-time">
+        <div class="filter-options">
           <label for="filter-time-select">Starting from </label>
-          <select id="filter-time-select" name="filter-time-select">
+          <select class="filter-options-select" id="filter-time-select" name="filter-time-select">
             <option selected hidden disabled>Pick Time</option>
             <option>0730</option>
             <option>0800</option>
@@ -91,7 +91,7 @@
 
       <div id="reserve-list-main"> <!--flexbox col-->
         <div class="right-most-btn"> <!--fb col 1-->
-          <button class="reserve-list-btn" id="back-to-menu-btn">Back</button>
+          <button class="reserve-list-btn" id="back-to-dashboard">Back</button>
         </div>
 
         <div class="reserve-view">  <!--fb col 2-->
@@ -115,6 +115,12 @@
         </div>
       </div>
     </div>
+  <script>
+    let go_back = document.querySelector("#back-to-dashboard");
+    go_back.onclick = function (){
+    window.location.href = "dashboard.html";
+    };
+  </script>
   <script type="application/javascript" src="../../backend/main.js"></script>
   <script type="application/javascript" src="../../backend/sidebar.js"></script>
   </body>

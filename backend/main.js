@@ -78,7 +78,6 @@ function writeReservations() {
             <p>Date of Request: <span class="font-bold">${reservation.request_date}</span></p>
             <p>Time of Request: <span class="font-bold">${reservation.request_time}</span></p>
             <p>Date of Reservation: <span class="font-bold">${reservation.reserve_date}</span></p>
-            <p>Date: <span class="font-bold">${reservation.date}</span></p>
             <p>Time: <span class="font-bold">${reservation.start_time} - ${reservation.end_time}</span></p>
             <p>Seats: </p>
         `;

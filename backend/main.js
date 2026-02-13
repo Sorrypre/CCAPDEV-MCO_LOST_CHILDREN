@@ -19,15 +19,13 @@ function toggleNav() {
 }
 
 function toggleFilter() {
-    var filter_area = document.getElementById("filter-area");
+    var filter_box = document.getElementById("filter-box");
     if (filter_toggled) {
-        filter_area.style.visibility = "hidden";
-        filter_area.style.overflow = "hidden";
-        filter_area.style.height = "0px";
+        filter_box.classList.remove('flex');
+        filter_box.classList.add('hidden');
     } else {
-        filter_area.style.visibility = "visible";
-        filter_area.style.overflow = "visible";
-        filter_area.style.height = "auto";
+        filter_box.classList.remove('hidden');
+        filter_box.classList.add('flex');
     }
     filter_toggled = !filter_toggled;
 }

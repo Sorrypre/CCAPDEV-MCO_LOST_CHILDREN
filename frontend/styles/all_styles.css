@@ -113,7 +113,7 @@
 
 /* SIDEBAR */
 .side-nav {
-	@apply w-0 pt-4 h-full fixed overflow-hidden flex flex-col justify-start items-start bg-black/70;
+	@apply bg-black/70 w-0 pt-4 h-full fixed overflow-hidden flex flex-col justify-start items-start gap-y-1;
 	@apply duration-300 ease-out;
 }
 
@@ -121,8 +121,8 @@
 	@apply w-full p-4 rounded-xl font-grotesk text-left text-white truncate;
 	@apply transition duration-100;
 	@apply hover:bg-white hover:text-black hover:font-bold hover:cursor-pointer;
-	@apply focus:outline-3 focus:outline-white-800;
-	@apply active:bg-white-800;
+	@apply focus:outline-4 focus:outline-blue-500;
+	@apply active:bg-white;
 }
 
 .login .side-nav-button:not(.login-visible) {

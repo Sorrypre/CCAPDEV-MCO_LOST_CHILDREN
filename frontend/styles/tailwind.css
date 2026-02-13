@@ -7,12 +7,11 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-yellow-600: oklch(68.1% 0.162 75.834);
-    --color-green-300: oklch(87.1% 0.15 154.449);
     --color-green-700: oklch(52.7% 0.154 150.069);
-    --color-blue-300: oklch(80.9% 0.105 251.813);
+    --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-700: oklch(48.8% 0.243 264.376);
-    --color-blue-800: oklch(42.4% 0.199 265.638);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-700: oklch(37.3% 0.034 259.733);
@@ -830,12 +829,16 @@
   }
 }
 @layer utilities;
-.login form {
+#index-forms {
+  display: flex;
+  flex-direction: row;
+}
+#index-forms form {
   transition-behavior: allow-discrete;
   --tw-duration: 200ms;
   transition-duration: 200ms;
 }
-.login label {
+#index-forms label {
   width: 100%;
   font-family: var(--font-inter);
   font-size: 15px;
@@ -844,7 +847,7 @@
     font-size: 30px;
   }
 }
-.login input {
+#index-forms input {
   width: 100%;
   border-radius: var(--radius-2xl);
   background-color: var(--color-white);
@@ -864,7 +867,7 @@
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
 }
-.login button {
+#index-forms button {
   cursor: pointer;
   transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
   transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -877,6 +880,13 @@
       filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
     }
   }
+  &:focus {
+    outline-style: var(--tw-outline-style);
+    outline-width: 3px;
+  }
+  &:focus {
+    outline-color: var(--color-white);
+  }
 }
 #index-content {
   margin-top: calc(var(--spacing) * 10);
@@ -885,10 +895,6 @@
   align-items: center;
   justify-content: center;
   row-gap: calc(var(--spacing) * 2);
-}
-#index-forms {
-  display: flex;
-  flex-direction: row;
 }
 #login, #register {
   display: flex;
@@ -950,15 +956,10 @@
     content: var(--tw-content);
   }
 }
-.register-invalid {
+.register-invalid, .login-invalid {
   display: none;
   font-family: var(--font-inter);
-  color: var(--color-green-300);
-}
-.login-invalid {
-  display: none;
-  font-family: var(--font-inter);
-  color: var(--color-blue-300);
+  color: var(--color-red-500);
 }
 .register-invalid.username-empty, .login-invalid.username-empty {
   &::after {
@@ -2816,6 +2817,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  row-gap: calc(var(--spacing) * 1);
   overflow: hidden;
   background-color: color-mix(in srgb, #000 70%, transparent);
   @supports (color: color-mix(in lab, red, red)) {
@@ -2865,16 +2867,13 @@ body {
   }
   &:focus {
     outline-style: var(--tw-outline-style);
-    outline-width: 3px;
+    outline-width: 4px;
   }
   &:focus {
-    outline-offset: 3px;
-  }
-  &:focus {
-    outline-color: var(--color-blue-800);
+    outline-color: var(--color-blue-500);
   }
   &:active {
-    background-color: var(--color-blue-800);
+    background-color: var(--color-white);
   }
 }
 .login .side-nav-button:not(.login-visible) {

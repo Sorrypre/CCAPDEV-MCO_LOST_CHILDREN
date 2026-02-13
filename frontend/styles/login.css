@@ -2,28 +2,28 @@
 
 /* LOGIN */
 
-.login form {
+#index-forms {
+	@apply flex flex-row;
+}
+
+#index-forms form {
 	@apply transition-discrete duration-200;
 }
 
-.login label {
+#index-forms label {
 	@apply w-full text-white text-[15px] md:text-[30px] font-inter;
 }
 
-.login input {
+#index-forms input {
 	@apply p-2 text-[15px] w-full bg-white text-base md:max-lg:text-lg xl:text-xl font-smono rounded-2xl;
 }
 
-.login button {
-	@apply cursor-pointer transition duration-350 hover:brightness-175;
+#index-forms button {
+	@apply cursor-pointer transition duration-350 hover:brightness-175 focus:outline-3 focus:outline-white;
 }
 
 #index-content {
 	@apply mt-10 flex flex-col justify-center items-center gap-y-2;
-}
-
-#index-forms {
-	@apply flex flex-row;
 }
 
 #login, #register {
@@ -50,12 +50,8 @@
 	@apply p-3 w-full bg-gray-800 rounded-xl after:content-['Back_to_Login'];
 }
 
-.register-invalid {
-	@apply font-inter text-green-300 hidden;
-}
-
-.login-invalid {
-	@apply font-inter text-blue-300 hidden;
+.register-invalid, .login-invalid {
+	@apply font-inter text-red-500 hidden;
 }
 
 .register-invalid.username-empty, .login-invalid.username-empty {

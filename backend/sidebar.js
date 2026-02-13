@@ -42,7 +42,7 @@ redir_account_settings.addEventListener('click', async function(e) {
 	if (await isServer())
 		window.location.href = '/account_settings';
 	else
-		window.location.href = './account-settings.html';
+		window.location.href = './settings.html';
 });
 
 redir_contact_us.addEventListener('click', async function(e) {

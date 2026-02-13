@@ -7,9 +7,11 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-300: oklch(80.8% 0.114 19.571);
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-yellow-600: oklch(68.1% 0.162 75.834);
     --color-green-700: oklch(52.7% 0.154 150.069);
+    --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-700: oklch(48.8% 0.243 264.376);
     --color-gray-200: oklch(92.8% 0.006 264.531);
@@ -298,6 +300,9 @@
   .h-\[200px\] {
     height: 200px;
   }
+  .max-h-0 {
+    max-height: calc(var(--spacing) * 0);
+  }
   .max-h-\[200px\] {
     max-height: 200px;
   }
@@ -327,6 +332,9 @@
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .resize {
     resize: both;
@@ -358,6 +366,9 @@
   .justify-self-center {
     justify-self: center;
   }
+  .overflow-hidden {
+    overflow: hidden;
+  }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
@@ -374,6 +385,9 @@
   .bg-black {
     background-color: var(--color-black);
   }
+  .bg-blue-400 {
+    background-color: var(--color-blue-400);
+  }
   .bg-blue-700 {
     background-color: var(--color-blue-700);
   }
@@ -388,6 +402,9 @@
   }
   .bg-gray-800 {
     background-color: var(--color-gray-800);
+  }
+  .bg-white {
+    background-color: var(--color-white);
   }
   .bg-zinc-600 {
     background-color: var(--color-zinc-600);
@@ -422,6 +439,9 @@
   .text-justify {
     text-align: justify;
   }
+  .text-left {
+    text-align: left;
+  }
   .font-\[\'DM_Sans\'\] {
     font-family: 'DM Sans';
   }
@@ -430,6 +450,9 @@
   }
   .font-\[\'Space_Mono\'\] {
     font-family: 'Space Mono';
+  }
+  .font-grotesk {
+    font-family: var(--font-grotesk);
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -442,6 +465,10 @@
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .text-6xl {
+    font-size: var(--text-6xl);
+    line-height: var(--tw-leading, var(--text-6xl--line-height));
   }
   .text-base {
     font-size: var(--text-base);
@@ -511,6 +538,13 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .transition-discrete {
+    transition-behavior: allow-discrete;
+  }
+  .duration-200 {
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+  }
   .duration-350 {
     --tw-duration: 350ms;
     transition-duration: 350ms;
@@ -552,6 +586,17 @@
         --tw-shadow: 12px 20px 25px 3px var(--tw-shadow-color, currentcolor);
         box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
       }
+    }
+  }
+  .focus\:outline-3 {
+    &:focus {
+      outline-style: var(--tw-outline-style);
+      outline-width: 3px;
+    }
+  }
+  .focus\:outline-red-300 {
+    &:focus {
+      outline-color: var(--color-red-300);
     }
   }
   .md\:h-24 {
@@ -1498,6 +1543,12 @@
   align-items: center;
   row-gap: calc(var(--spacing) * 4);
 }
+#reservation-list {
+  position: relative;
+  height: calc(3/4 * 100%);
+  min-height: 460px;
+  width: 100%;
+}
 #filter-box {
   position: fixed;
   inset: calc(var(--spacing) * 0);
@@ -1566,14 +1617,13 @@
   color: var(--color-white);
 }
 .reserve-list-card {
+  position: static;
   height: calc(2/3 * 100%);
   min-height: 400px;
   width: calc(2/3 * 100%);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: var(--radius-2xl);
-  background-color: #364156;
   padding: calc(var(--spacing) * 2);
 }
 .right-most-btn {
@@ -1656,11 +1706,14 @@
   }
 }
 .reservation-item {
+  position: absolute;
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: flex-start;
   column-gap: calc(var(--spacing) * 4);
+  border-radius: var(--radius-2xl);
+  background-color: #364156;
   padding: calc(var(--spacing) * 4);
   font-family: var(--font-grotesk);
   color: var(--color-white);
@@ -3032,6 +3085,7 @@ body {
 }
 .side-nav {
   position: fixed;
+  z-index: 100;
   display: flex;
   height: 100%;
   width: calc(var(--spacing) * 0);

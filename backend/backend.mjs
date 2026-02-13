@@ -43,7 +43,7 @@ xj.get('/see_reservations', checkUser, (q, r) => {
 });
 
 xj.get('/account_settings', checkUser, (q, r) => {
-	r.redirect('/frontend/pages/account-settings.html');
+	r.redirect('/frontend/pages/settings.html');
 });
 
 xj.get('/contact_us', checkUser, (q, r) => {

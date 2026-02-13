@@ -19,14 +19,14 @@
 
 		<!-- Main Content Page-->
 		<div class="content-area">
-		<div id="in-side-nav" class="side-nav">
-			<a>Dashboard</a>
-			<a>Reserve Seats</a>
-			<a>See Reservations</a>
-			<a>Account Setting</a>
-			<a>Contact Us</a>
-			<a>Log Out</a>
-		</div>
+			<div id="in-side-nav" class="side-nav">
+				<a>Dashboard</a>
+				<a>Reserve Seats</a>
+				<a>See Reservations</a>
+				<a>Account Setting</a>
+				<a>Contact Us</a>
+				<a>Log Out</a>
+			</div>
 			<div id="dlsuBuildings-content">
 				<div class="right-most-btn"> <!--fb col 1-->
 					<button class="backToDashBoard-btn" id="back-to-dashboard">Back</button>
@@ -38,13 +38,13 @@
 							<img src="../assets/images/icon-henrySyHall.png">
 						</div>
 					</div>
-								<div class="invisible-card-container">
+					<div class="invisible-card-container">
 						<p class="building-name">Gokongwei Hall</p>
 						<div id="Gokongwei-area" class="selection-area">
 							<img src="../assets/images/icon-gokongweiHall.png">
 						</div>
 					</div>
-								<div class="invisible-card-container">
+					<div class="invisible-card-container">
 						<p class="building-name">St. Lasalle Hall</p>
 						<div id="StLasalle-area" class="selection-area">
 							<img src="../assets/images/icon-stLaSalleHall.png">
@@ -53,6 +53,37 @@
 				</div>
 			</div>
 		</div>
+        <script>
+			let go_back = document.querySelector("#back-to-dashboard");
+            go_back.onclick = function (){
+                window.location.href = "dashboard.html";
+            };
+			
+			let buildingRedirect = (buildingID, roomlink) => {
+				let building = document.querySelector(buildingID);
+				building.onclick = () => {
+					window.location.href = roomlink;
+				}
+			}
+
+			buildingRedirect('#HenrySy-area', 'reserve-rooms.html');
+			buildingRedirect('#Gokongwei-area', 'reserve-rooms.html');
+			buildingRedirect('#StLasalle-area', 'reserve-rooms.html');
+
+			// let henryBuilding = document.querySelector("#HenrySy-area");
+			// henryBuilding.onclick = function () {
+			// 	window.location.href = "reserve-rooms.html";
+			// };
+			// let goksBuilding = document.querySelector("#Gokongwei-area");
+			// goksBuilding.onclick = function () {
+			// 	window.location.href = "reserve-rooms.html";
+			// };
+			// let stLasalleBuilding = document.querySelector("#StLasalle-area");
+			// stLasalleBuilding.onclick = function () {
+			// 	window.location.href = "reserve-rooms.html";
+			// };
+			
+        </script>
 		<script src="../../backend/main.js"> </script>
     </body>
 </html>

@@ -33,6 +33,6 @@ function toggleFilter() {
 }
 
 hamburger.addEventListener("click", toggleNav);
-filter_btn.addEventListener("click", toggleFilter);
-filter_cls_btn.addEventListener("click", toggleFilter);
-filter_save_btn.addEventListener("click", toggleFilter);
+if (filter_btn) filter_btn.addEventListener("click", toggleFilter);
+if (filter_cls_btn) filter_cls_btn.addEventListener("click", toggleFilter);
+if (filter_save_btn) filter_save_btn.addEventListener("click", toggleFilter);

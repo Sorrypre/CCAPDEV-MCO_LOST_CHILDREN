@@ -39,7 +39,7 @@
 
 }
 
-#content-area{
+#content-area-rooms{
     @apply p-4 gap-10 flex flex-col md:flex-row items-center w-full px-6;
     @apply items-start;
 }
@@ -57,6 +57,7 @@
     @apply border-none outline-none appearance-none bg-transparent;
     @apply border-b border-solid border-white;
     @apply placeholder:text-white text-white;
+    @apply md:text-2xl 
 }
 
 #available-rooms-container{

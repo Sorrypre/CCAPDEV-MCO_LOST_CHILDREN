@@ -41,6 +41,8 @@
 @import './login.css';
 @import './dashboard.css';
 @import './reservation-list.css';
+@import './reserve-rooms.css';
+@import './reserve-seat.css';
 @import './DLSU-buildings.css';
 @import './settings.css';
 
@@ -74,6 +76,8 @@
 
 #hamburger-btn {
 	@apply ml-4 mb-2;
+	@apply transition duration-200;
+	@apply hover:bg-white hover:text-black hover:cursor-pointer;
 }
 
 .wrap-spacer {
@@ -81,7 +85,7 @@
 }
 
 .hamburger-icon {
-	@apply font-bold text-white text-4xl md:text-5xl xl:text-7xl after:content-['\2630'];
+	@apply font-bold text-white m-4 pb-4 text-4xl md:text-5xl xl:text-7xl after:content-['\2630'];
 }
 
 .profile-bubble {
@@ -104,14 +108,48 @@
 	@apply w-full h-full;
 }
 
-.content-area a {
-	@apply font-grotesk text-white hover:bg-white hover:text-black hover:cursor-pointer transition duration-300 rounded-2xl p-2;
-}
-
-.side-nav {
-	@apply fixed overflow-hidden h-full w-0 bg-gray-800/40 flex flex-col gap-y-4 justify-start items-start pt-4 duration-500 ease-in-out;
-}
-
 .content {
 	@apply mt-10 flex flex-col justify-center items-center;
+}
+
+/* SIDEBAR */
+.side-nav {
+	@apply bg-black/70 w-0 pt-4 h-full fixed overflow-hidden flex flex-col justify-start items-start gap-y-1;
+	@apply duration-300 ease-out;
+}
+
+.side-nav-button {
+	@apply w-full p-4 rounded-xl font-grotesk text-left text-white truncate;
+	@apply transition duration-100;
+	@apply hover:bg-white hover:text-black hover:font-bold hover:cursor-pointer;
+	@apply focus:outline-4 focus:outline-blue-500;
+	@apply active:bg-white;
+}
+
+.login .side-nav-button:not(.login-visible) {
+	@apply hidden;
+}
+
+#redir-dashboard {
+	@apply after:content-['Dashboard'];
+}
+
+#redir-reserve-seats {
+	@apply after:content-['Reserve_Seats'];
+}
+
+#redir-see-reservations {
+	@apply after:content-['See_Reservations'];
+}
+
+#redir-account-settings {
+	@apply after:content-['Account_Settings'];
+}
+
+#redir-contact-us {
+	@apply after:content-['Contact_Us'];
+}
+
+#redir-log-out {
+	@apply after:content-['Log_Out'];
 }

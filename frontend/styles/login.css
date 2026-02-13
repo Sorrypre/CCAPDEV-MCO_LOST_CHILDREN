@@ -2,24 +2,36 @@
 
 /* LOGIN */
 
+#index-forms {
+	@apply flex flex-row;
+}
+
+#index-forms form {
+	@apply transition-discrete duration-200;
+}
+
+#index-forms label {
+	@apply w-full text-white text-[15px] md:text-[30px] font-inter;
+}
+
+#index-forms input {
+	@apply p-2 text-[15px] w-full bg-white text-base md:max-lg:text-lg xl:text-xl font-smono rounded-2xl;
+}
+
+#index-forms button {
+	@apply cursor-pointer transition duration-350 hover:brightness-175 focus:outline-3 focus:outline-white;
+}
+
 #index-content {
-	@apply mt-10 flex flex-col justify-center items-center;
+	@apply mt-10 flex flex-col justify-center items-center gap-y-2;
 }
 
 #login, #register {
-	@apply p-6 bg-gray-700/40 max-w-[700px] rounded-2xl flex flex-wrap justify-center;
+	@apply p-6 bg-gray-700/40 max-w-[700px] rounded-2xl flex flex-wrap justify-center gap-y-2;
 }
 
 #register {
 	@apply hidden;
-}
-
-label {
-	@apply w-full text-white text-[15px] md:text-[30px] font-inter;
-}
-
-input {
-	@apply p-2 text-[15px] md:w-[30em] bg-white text-base md:max-lg:text-lg xl:text-xl font-smono rounded-2xl;
 }
 
 #login-submit-login {
@@ -38,8 +50,36 @@ input {
 	@apply p-3 w-full bg-gray-800 rounded-xl after:content-['Back_to_Login'];
 }
 
+.register-invalid, .login-invalid {
+	@apply font-inter text-red-500 hidden;
+}
+
+.register-invalid.username-empty, .login-invalid.username-empty {
+	@apply after:content-['\26A0__Please_enter_a_username.'];
+}
+
+.register-invalid.username-invalid, .login-invalid.username-invalid {
+	@apply after:content-['\26A0__Username_is_invalid.'];
+}
+
+.register-invalid.password-empty, .login-invalid.password-empty {
+	@apply after:content-['\26A0__Please_enter_a_password.'];
+}
+
+.register-invalid.password-short, .login-invalid.password-short {
+	@apply after:content-['\26A0__Password_must_be_at_least_8_characters.'];
+}
+
+.register-invalid.confirm-mismatch {
+	@apply after:content-['\26A0__These_passwords_do_not_match.'];
+}
+
+.register-invalid.confirm-empty {
+	@apply after:content-['\26A0__Please_confirm_your_password.'];
+}
+
 .login-entry {
-	@apply max-w-[600px];
+	@apply pl-4 pr-4 w-full;
 }
 
 .login-button-text {

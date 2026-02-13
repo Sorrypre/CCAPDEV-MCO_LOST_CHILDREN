@@ -8,24 +8,48 @@
     @apply w-full gap-y-4 flex flex-col flex-grow items-center;
 }
 
+#filter-box {
+    @apply p-10 fixed inset-0 z-[100] hidden items-center justify-center;
+}
+
+#filter-area {
+    @apply  bg-[#212D40] w-1/3 rounded-2xl flex flex-col justify-center gap-y-4;
+}
+
 #text-filter {
     @apply p-4 text-white text-2xl font-bold font-grotesk;
 }
 
-#filter-area {
-    @apply  fixed invisible overflow-hidden flex flex-col gap-y-4 z-50 max-w-full justify-start items-start;
-    @apply  bg-[#212D40]/100 rounded-b-2xl;
-    @apply  duration-500 ease-in-out;
+#filter-date {
+    @apply p-4 m-4 bg-[#364156ff] flex flex-row gap-x-4 justify-center items-center rounded-2xl;
+    @apply text-white font-grotesk;
 }
 
-#filter-date {
-    @apply p-4 ml-2 bg-[#364156ff] flex flex-row gap-x-4 justify-center items-center rounded-2xl;
+#filter-building {
+    @apply p-4 m-4 bg-[#364156ff] flex flex-row gap-x-4 justify-center items-center rounded-2xl;
     @apply text-white font-grotesk;
+}
+
+#filter-building-select {
+    @apply p-2 bg-white text-[#364156ff] font-bold font-dmsans rounded-xl;
+}
+
+#filter-room {
+    @apply p-4 m-4 bg-[#364156ff] flex flex-row gap-x-4 justify-center items-center rounded-2xl;
+    @apply text-white font-grotesk;
+}
+
+#filter-room-select {
+    @apply p-2 bg-white text-[#364156ff] font-bold font-dmsans rounded-xl;
 }
 
 #filter-time {
-    @apply p-4 flex flex-row gap-x-4 justify-center items-center;
+    @apply p-4 m-4 bg-[#364156ff] flex flex-row gap-x-4 justify-center items-center rounded-2xl;
     @apply text-white font-grotesk;
+}
+
+#filter-time-select {
+    @apply p-2 bg-white text-[#364156ff] font-bold font-dmsans rounded-xl;
 }
 
 #filter-save-close {
@@ -57,14 +81,14 @@
     @apply hover:cursor-pointer;
 }
 
-.filter-date-btns {
+.filter-date-btn {
     @apply p-2 bg-[#212D40] w-full flex flex-row gap-x-4 justify-center items-center rounded-2xl;
     @apply hover:bg-[#fff] hover:text-[#364156ff];
     @apply hover:cursor-pointer;
 }
 
-.filter-btns {
+.filter-btn {
     @apply p-2 gap-x-4 text-white font-bold bg-[#364156ff] font-dmsans rounded-2xl;
-    @apply hover:bg-[#fff] hover:text-[#364156ff];
+    @apply hover:bg-white hover:text-[#364156ff];
     @apply hover:cursor-pointer;
 }

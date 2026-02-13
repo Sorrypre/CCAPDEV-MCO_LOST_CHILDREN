@@ -1,14 +1,224 @@
+// util func
+function sleep(ms) {
+	return new Promise(r => setTimeout(r, ms));
+}
+
+// elements
+const btn_login = document.getElementById('login-submit-login');
+const btn_create = document.getElementById('register-new-user');
 const btn_reg = document.getElementById('login-register');
 const btn_ret_login = document.getElementById('register-cancel');
+const ctr_form = document.getElementById('index-forms');
 const form_reg = document.getElementById('register');
 const form_login = document.getElementById('login');
 
-btn_reg.addEventListener('click', function(e) {
-	form_reg.style.display = "flex";
-	form_login.style.display = "none";
+// input boxes
+const form_inp_lusr = form_login.elements.namedItem('login-username');
+const form_inp_lpwd = form_login.elements.namedItem('login-password');
+const form_inp_rusr = form_reg.elements.namedItem('register-username');
+const form_inp_rpwd = form_reg.elements.namedItem('register-password');
+const form_inp_rcfm = form_reg.elements.namedItem('register-confirm-password');
+// status labels
+const lbl_lusr = document.getElementById('login-username-status');
+const lbl_lpwd = document.getElementById('login-password-status');
+const lbl_rusr = document.getElementById('register-username-status');
+const lbl_rpwd = document.getElementById('register-password-status');
+const lbl_rcfm = document.getElementById('register-confirm-status');
+
+// prereqs
+const rxe = new RegExp("\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
+const pwd_min = 8;
+
+// handle login / create account
+btn_login.addEventListener('click', function(e) {
+	function alert_username(t) {
+		switch (t) {
+			case 0:
+				lbl_lusr.classList.add('username-empty');
+				break;
+			case 1:
+				lbl_lusr.classList.add('username-invalid');
+				break;
+			default:
+				return false;
+		}
+		lbl_lusr.style['display'] = 'inline';
+		void lbl_lusr.offsetWidth;
+		return true;
+	}
+	
+	function alert_password(t) {
+		switch (t) {
+			case 0:
+				lbl_lpwd.classList.add('password-empty');
+				break;
+			case 1:
+				lbl_lpwd.classList.add('password-short');
+				break;
+			default:
+				return false;
+		}
+		lbl_lpwd.style['display'] = 'inline';
+		void lbl_lpwd.offsetWidth;
+		return true;
+	}
+	
+	if (!form_inp_lusr || !form_inp_lpwd)
+		return;
+	if (form_inp_lusr.value.length > 0 && rxe.test(form_inp_lusr.value) && form_inp_lpwd.value.length >= pwd_min) {
+		form_login.submit();
+		return true;
+	} else {
+		if (form_inp_lusr.value.length === 0)
+			alert_username(0);
+		if (form_inp_lpwd.value.length === 0)
+			alert_password(0);
+		if (!rxe.test(form_inp_lusr.value))
+			alert_username(1);
+		if (form_inp_lpwd.value.length < pwd_min)
+			alert_password(1);
+		return false;
+	}
 });
 
-btn_ret_login.addEventListener('click', function(e) {
-	form_reg.style.display = "none";
-	form_login.style.display = "flex";
+btn_create.addEventListener('click', function(e) {
+	function alert_username(t) {
+		switch (t) {
+			case 0:
+				lbl_rusr.classList.add('username-empty');
+				break;
+			case 1:
+				lbl_rusr.classList.add('username-invalid');
+				break;
+			default:
+				return false;
+		}
+		lbl_rusr.style['display'] = 'inline';
+		void lbl_rusr.offsetWidth;
+		return true;
+	}
+	
+	function alert_password(t) {
+		switch (t) {
+			case 0:
+				lbl_rpwd.classList.add('password-empty');
+				break;
+			case 1:
+				lbl_rpwd.classList.add('password-short');
+				break;
+			default:
+				return false;
+		}
+		lbl_rpwd.style['display'] = 'inline';
+		void lbl_rpwd.offsetWidth;
+		return true;
+	}
+	
+	function alert_confirm(t) {
+		switch (t) {
+			case 0:
+				lbl_rcfm.classList.add('confirm-empty');
+				break;
+			case 1:
+				lbl_rcfm.classList.add('confirm-mismatch');
+				break;
+			default:
+				return false;
+		}
+		lbl_rcfm.style['display'] = 'inline';
+		void lbl_rcfm.offsetWidth;
+		return true;
+	}
+	
+	if (!form_inp_rpwd || !form_inp_rcfm)
+		return;
+	if (form_inp_rusr.value.length > 0 && rxe.test(form_inp_rusr.value) && form_inp_rpwd.value.length >= pwd_min && form_inp_rpwd.value === form_inp_rcfm.value) {
+		form_reg.submit();
+		return true;
+	} else {
+		if (form_inp_rusr.value.length === 0)
+			alert_username(0);
+		if (form_inp_rpwd.value.length === 0)
+			alert_password(0);
+		if (form_inp_rcfm.value.length === 0)
+			alert_confirm(0);
+		if (!rxe.test(form_inp_rusr.value))
+			alert_username(1);
+		if (form_inp_rpwd.value.length < pwd_min)
+			alert_password(1);
+		if (form_inp_rpwd.value !== form_inp_rcfm.value)
+			alert_confirm(1);
+		return false;
+	}
+});
+
+form_inp_lusr.addEventListener('input', function(e) {
+	if (lbl_lusr.classList.length > 1) {
+		lbl_lusr.className = 'login-invalid';
+		void lbl_lusr.offsetWidth;
+	}
+});
+
+form_inp_lpwd.addEventListener('input', function(e) {
+	if (lbl_lpwd.classList.length > 1) {
+		lbl_lpwd.className = 'login-invalid';
+		void lbl_lpwd.offsetWidth;
+	}
+});
+
+form_inp_rusr.addEventListener('input', function(e) {
+	if (lbl_rusr.classList.length > 1) {
+		lbl_rusr.className = 'register-invalid';
+		void lbl_rusr.offsetWidth;
+	}
+});
+
+form_inp_rpwd.addEventListener('input', function(e) {
+	if (lbl_rpwd.classList.length > 1) {
+		lbl_rpwd.className = 'register-invalid';
+		void lbl_rpwd.offsetWidth;
+	}
+});
+
+form_inp_rcfm.addEventListener('input', function(e) {
+	if (lbl_rcfm.classList.length > 1) {
+		lbl_rcfm.className = 'register-invalid';
+		void lbl_rcfm.offsetWidth;
+	}
+});
+
+// handle register / back to login
+// must be strictly greater than duration for <form> transitions, see login.css
+const delay = 300;
+
+btn_reg.addEventListener('click', async function(e) {
+	ctr_form.style['flex-direction'] = 'row-reverse';
+	form_login.style['transform'] = 'translateX(80%)';
+	form_login.style['display'] = 'none';
+	form_login.style['opacity'] = '0.0';
+	// wait for transition to finish
+	await sleep(delay);
+	form_reg.style['transform'] = 'translateX(80%)';
+	form_reg.style['transform'] = 'none';
+	form_reg.style['display'] = 'flex';
+	form_reg.style['opacity'] = '1.0';
+	// wait for transition to finish
+	await sleep(delay);
+	void ctr_form.offsetWidth;
+});
+
+btn_ret_login.addEventListener('click', async function(e) {
+	ctr_form.style['flex-direction'] = 'row';
+	form_reg.style['transform'] = 'translateX(80%)';
+	form_reg.style['display'] = 'none';
+	form_reg.style['opacity'] = '0.0';
+	// wait for transition to finish
+	await sleep(delay);
+	form_login.style['transform'] = 'translateX(80%)';
+	form_login.style['transform'] = 'none';
+	form_login.style['display'] = 'flex';
+	form_login.style['opacity'] = '1.0';
+	// wait for transition to finish
+	await sleep(delay);
+	void ctr_form.offsetWidth;
 });

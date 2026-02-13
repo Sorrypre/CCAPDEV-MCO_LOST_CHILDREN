@@ -107,12 +107,12 @@
 	@apply w-full h-full;
 }
 
-.content-area a {
-	@apply font-grotesk text-white hover:bg-white hover:text-black hover:cursor-pointer transition duration-300 rounded-2xl p-2;
-}
-
 .side-nav {
 	@apply fixed overflow-hidden h-full w-0 bg-gray-800/40 flex flex-col gap-y-4 justify-start items-start pt-4 duration-500 ease-in-out;
+}
+
+.side-nav a {
+	@apply font-grotesk text-white hover:bg-white hover:text-black hover:cursor-pointer transition duration-300 rounded-2xl p-2;
 }
 
 .login.side-nav a:not(.login-visible) {

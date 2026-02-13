@@ -82,7 +82,7 @@
 }
 
 .hamburger-icon {
-	@apply font-bold text-white text-4xl md:text-5xl xl:text-7xl after:content-['\2630'];
+	@apply font-bold text-white m-4 pb-4 text-4xl md:text-5xl xl:text-7xl after:content-['\2630'];
 }
 
 .profile-bubble {

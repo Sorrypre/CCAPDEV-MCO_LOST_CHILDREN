@@ -3110,10 +3110,6 @@ body {
     font-size: var(--text-2xl);
     line-height: calc(var(--spacing) * 10);
   }
-  &::after {
-    --tw-content: 'Proin fringilla augue non volutpat faucibus. Maecenas congue nulla eget orci commodo, id dictum elit ornare. Maecenas pulvinar ante non nisl facilisis efficitur. Ut semper libero gravida nisi condimentum varius a sed dui. Nullam luctus eget tortor ut molestie. Vestibulum quam arcu, laoreet eu aliquet ac, ultricies vitae mauris. Aenean ac leo turpis. Fusce ac luctus leo. Etiam vel imperdiet magna. Maecenas iaculis nibh vitae augue tempus, id accumsan metus venenatis. Maecenas facilisis in felis accumsan semper. Duis accumsan mattis orci ut congue.';
-    content: var(--tw-content);
-  }
 }
 .ctc-head-text {
   padding: calc(var(--spacing) * 3);
@@ -3128,6 +3124,14 @@ body {
     --tw-text-shadow-color: color-mix(in oklab, var(--color-black) var(--tw-text-shadow-alpha), transparent);
   }
   text-shadow: 0px 1px 2px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1)), 0px 3px 2px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1)), 0px 4px 8px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1));
+}
+#lorem-ipsum .ctc-ordinary-text {
+  &::after {
+    --tw-content: 'Proin fringilla augue non volutpat faucibus. Maecenas congue nulla eget orci commodo, id dictum elit ornare. Maecenas pulvinar ante non nisl facilisis efficitur. Ut semper libero gravida nisi condimentum varius a sed dui. Nullam luctus eget tortor ut molestie. Vestibulum quam arcu, laoreet eu aliquet ac, ultricies vitae mauris. Aenean ac leo turpis. Fusce ac luctus leo. Etiam vel imperdiet magna. Maecenas iaculis nibh vitae augue tempus, id accumsan metus venenatis. Maecenas facilisis in felis accumsan semper. Duis accumsan mattis orci ut congue.';
+    content: var(--tw-content);
+  }
+}
+#lorem-ipsum .ctc-head-text {
   &::after {
     --tw-content: 'Hello World!';
     content: var(--tw-content);

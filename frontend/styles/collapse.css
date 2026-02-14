@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+#collapse-test-content {
+	@apply flex flex-col;
+}
+
+.collapsible-entry {
+	@apply flex flex-col mt-[5%] ml-[10%] mr-[10%];
+}
+
+.collapsible-button {
+	@apply w-full p-5 bg-sky-200/90 font-inter font-thin italic text-black text-6xl text-left cursor-pointer;
+}
+
+.collapsible-target {
+	@apply bg-white/70 w-full h-0 overflow-hidden;
+	@apply transition-discrete duration-500;
+}
+
+.collapsible-target-content {
+	@apply pt-2 p-7 flex flex-col;
+}

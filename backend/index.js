@@ -202,9 +202,6 @@ btn_reg.addEventListener('click', async function(e) {
 	form_reg.style['transform'] = 'none';
 	form_reg.style['display'] = 'flex';
 	form_reg.style['opacity'] = '1.0';
-	// wait for transition to finish
-	await sleep(delay);
-	void ctr_form.offsetWidth;
 });
 
 btn_ret_login.addEventListener('click', async function(e) {
@@ -218,7 +215,4 @@ btn_ret_login.addEventListener('click', async function(e) {
 	form_login.style['transform'] = 'none';
 	form_login.style['display'] = 'flex';
 	form_login.style['opacity'] = '1.0';
-	// wait for transition to finish
-	await sleep(delay);
-	void ctr_form.offsetWidth;
 });

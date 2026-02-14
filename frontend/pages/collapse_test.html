@@ -4,13 +4,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../styles/tailwind.css" />
 	</head>
-	<body id="page" class="dashboard-background ">
-		<div class="p-6 w-full bg-zinc-600 flex flex-col">
-			<button type="button" class="collapsible p-5 font-grotesk bg-blue-400 text-white text-6xl text-left cursor-pointer focus:outline-3 focus:outline-red-300">Lorem ipsum</button>
-			<div class="collapsible-target bg-white w-full max-h-0 overflow-hidden transition-discrete duration-200">
-				<p class="font-grotesk text-4xl text-justify">... dolor sit amet, consectetur adipiscing elit. Integer venenatis dolor lectus, ut sodales lorem venenatis in. Proin scelerisque ex nec sapien porttitor maximus. Donec non auctor sapien, at iaculis mauris. Fusce sem dui, lacinia a semper sed, ornare vel sapien. Vestibulum commodo quis sapien non dictum. Ut eleifend, turpis a pretium placerat, sapien velit vehicula ante, non pellentesque est nibh sed nulla. Nullam a augue orci. Vestibulum sodales, est sit amet rutrum volutpat, ante magna congue sem, in tincidunt est sapien id quam. Vivamus lacinia placerat eleifend. Nulla facilisi. Donec id ultricies ex. Cras ut vulputate eros. Curabitur sollicitudin at elit ut tristique. Etiam porttitor sapien lacinia, aliquet purus porttitor, ullamcorper nisl. Suspendisse nisl ex, tristique vel metus ac, ultrices lacinia enim. Nam id posuere nibh.</p>
+	<body id="page" class="dashboard-background">
+		<div class="content-area">
+			<div id="collapse-test-content">
+				<div class="collapsible-entry">
+					<button type="button" class="collapsible-button">Lorem ipsum</button>
+					<div class="collapsible-target folded">
+						<div class="collapsible-target-content">
+							<a class="p-3 font-grotesk font-bold text-white text-shadow-lg text-shadow-black text-4xl">Hello World!</a>
+							<p class="pt-0 pl-12 pr-12 font-dmsans text-justify indent-[55px] text-2xl/10 text-black text-shadow-md text-shadow-orange-200">Proin fringilla augue non volutpat faucibus. Maecenas congue nulla eget orci commodo, id dictum elit ornare. Maecenas pulvinar ante non nisl facilisis efficitur. Ut semper libero gravida nisi condimentum varius a sed dui. Nullam luctus eget tortor ut molestie. Vestibulum quam arcu, laoreet eu aliquet ac, ultricies vitae mauris. Aenean ac leo turpis. Fusce ac luctus leo. Etiam vel imperdiet magna. Maecenas iaculis nibh vitae augue tempus, id accumsan metus venenatis. Maecenas facilisis in felis accumsan semper. Duis accumsan mattis orci ut congue.</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<script src="./collapse.js"></script>
+		<script src="../../backend/collapse.js"></script>
 	</body>
 </html>

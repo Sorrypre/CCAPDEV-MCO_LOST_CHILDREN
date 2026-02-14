@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 #collapse-test-content {
-	@apply flex flex-col;
+	@apply flex flex-col mt-[5%] ml-[10%] mr-[10%];
 }
 
 .collapsible-entry {
-	@apply flex flex-col mt-[5%] ml-[10%] mr-[10%];
+	@apply flex flex-col;
 }
 
 .collapsible-button {
@@ -19,4 +19,14 @@
 
 .collapsible-target-content {
 	@apply pt-2 p-7 flex flex-col;
+}
+
+.ctc-ordinary-text {
+	@apply pt-0 pl-6 pr-6 md:pl-12 md:pr-12 font-dmsans text-justify indent-[3%] text-lg/10 md:text-2xl/10 text-black text-shadow-md text-shadow-orange-200;
+	@apply after:content-['Proin_fringilla_augue_non_volutpat_faucibus._Maecenas_congue_nulla_eget_orci_commodo,_id_dictum_elit_ornare._Maecenas_pulvinar_ante_non_nisl_facilisis_efficitur._Ut_semper_libero_gravida_nisi_condimentum_varius_a_sed_dui._Nullam_luctus_eget_tortor_ut_molestie._Vestibulum_quam_arcu,_laoreet_eu_aliquet_ac,_ultricies_vitae_mauris._Aenean_ac_leo_turpis._Fusce_ac_luctus_leo._Etiam_vel_imperdiet_magna._Maecenas_iaculis_nibh_vitae_augue_tempus,_id_accumsan_metus_venenatis._Maecenas_facilisis_in_felis_accumsan_semper._Duis_accumsan_mattis_orci_ut_congue.'];
+}
+
+.ctc-head-text {
+	@apply p-3 font-grotesk font-bold text-white text-shadow-lg text-shadow-black text-4xl;
+	@apply after:content-['Hello_World!'];
 }

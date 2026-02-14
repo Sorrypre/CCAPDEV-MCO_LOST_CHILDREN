@@ -8,8 +8,29 @@
 	@apply flex flex-col;
 }
 
+.collapsible-header {
+	@apply relative w-full flex items-center bg-sky-200/90;
+	@apply transition duration-700 hover:brightness-120 ease-in-out;
+}
+
+.collapsible-header * {
+	@apply font-inter font-thin text-black text-6xl text-left cursor-pointer;
+}
+
+.collapsible-fold-icon {
+	@apply absolute right-5 z-0 text-5xl font-bold;
+}
+
+.collapsible-fold-icon.folded {
+	@apply after:content-['\5E83'];
+}
+
+.collapsible-fold-icon:not(.folded) {
+	@apply after:content-['\7573'];
+}
+
 .collapsible-button {
-	@apply w-full p-5 bg-sky-200/90 font-inter font-thin italic text-black text-6xl text-left cursor-pointer;
+	@apply z-1 p-5 w-full h-full italic;
 }
 
 .collapsible-target {
@@ -22,17 +43,9 @@
 }
 
 .ctc-ordinary-text {
-	@apply pt-0 pl-6 pr-6 md:pl-12 md:pr-12 font-dmsans text-justify indent-[3%] text-lg/10 md:text-2xl/10 text-black text-shadow-md text-shadow-orange-200;
+	@apply pt-0 pl-6 pr-6 md:pl-12 md:pr-12 font-dmsans text-justify indent-[1.5em] text-lg/10 md:text-2xl/10 text-black text-shadow-md text-shadow-orange-200;
 }
 
 .ctc-head-text {
 	@apply p-3 font-grotesk font-bold text-white text-shadow-lg text-shadow-black text-4xl;
-}
-
-#lorem-ipsum .ctc-ordinary-text {
-	@apply after:content-['Proin_fringilla_augue_non_volutpat_faucibus._Maecenas_congue_nulla_eget_orci_commodo,_id_dictum_elit_ornare._Maecenas_pulvinar_ante_non_nisl_facilisis_efficitur._Ut_semper_libero_gravida_nisi_condimentum_varius_a_sed_dui._Nullam_luctus_eget_tortor_ut_molestie._Vestibulum_quam_arcu,_laoreet_eu_aliquet_ac,_ultricies_vitae_mauris._Aenean_ac_leo_turpis._Fusce_ac_luctus_leo._Etiam_vel_imperdiet_magna._Maecenas_iaculis_nibh_vitae_augue_tempus,_id_accumsan_metus_venenatis._Maecenas_facilisis_in_felis_accumsan_semper._Duis_accumsan_mattis_orci_ut_congue.'];
-}
-
-#lorem-ipsum .ctc-head-text {
-	@apply after:content-['Hello_World!'];
 }

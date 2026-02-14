@@ -58,6 +58,7 @@
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -3050,14 +3051,31 @@ body {
   display: flex;
   flex-direction: column;
 }
-.collapsible-button {
+.collapsible-header {
+  position: relative;
+  display: flex;
   width: 100%;
-  cursor: pointer;
+  align-items: center;
   background-color: color-mix(in srgb, oklch(90.1% 0.058 230.902) 90%, transparent);
   @supports (color: color-mix(in lab, red, red)) {
     background-color: color-mix(in oklab, var(--color-sky-200) 90%, transparent);
   }
-  padding: calc(var(--spacing) * 5);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 700ms;
+  transition-duration: 700ms;
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
+  &:hover {
+    @media (hover: hover) {
+      --tw-brightness: brightness(120%);
+      filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+    }
+  }
+}
+.collapsible-header * {
+  cursor: pointer;
   text-align: left;
   font-family: var(--font-inter);
   font-size: var(--text-6xl);
@@ -3065,6 +3083,33 @@ body {
   --tw-font-weight: var(--font-weight-thin);
   font-weight: var(--font-weight-thin);
   color: var(--color-black);
+}
+.collapsible-fold-icon {
+  position: absolute;
+  right: calc(var(--spacing) * 5);
+  z-index: 0;
+  font-size: var(--text-5xl);
+  line-height: var(--tw-leading, var(--text-5xl--line-height));
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+}
+.collapsible-fold-icon.folded {
+  &::after {
+    --tw-content: '\5E83';
+    content: var(--tw-content);
+  }
+}
+.collapsible-fold-icon:not(.folded) {
+  &::after {
+    --tw-content: '\7573';
+    content: var(--tw-content);
+  }
+}
+.collapsible-button {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  padding: calc(var(--spacing) * 5);
   font-style: italic;
 }
 .collapsible-target {
@@ -3090,7 +3135,7 @@ body {
   padding-right: calc(var(--spacing) * 6);
   padding-left: calc(var(--spacing) * 6);
   text-align: justify;
-  text-indent: 3%;
+  text-indent: 1.5em;
   font-family: var(--font-dmsans);
   font-size: var(--text-lg);
   line-height: calc(var(--spacing) * 10);
@@ -3124,18 +3169,6 @@ body {
     --tw-text-shadow-color: color-mix(in oklab, var(--color-black) var(--tw-text-shadow-alpha), transparent);
   }
   text-shadow: 0px 1px 2px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1)), 0px 3px 2px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1)), 0px 4px 8px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1));
-}
-#lorem-ipsum .ctc-ordinary-text {
-  &::after {
-    --tw-content: 'Proin fringilla augue non volutpat faucibus. Maecenas congue nulla eget orci commodo, id dictum elit ornare. Maecenas pulvinar ante non nisl facilisis efficitur. Ut semper libero gravida nisi condimentum varius a sed dui. Nullam luctus eget tortor ut molestie. Vestibulum quam arcu, laoreet eu aliquet ac, ultricies vitae mauris. Aenean ac leo turpis. Fusce ac luctus leo. Etiam vel imperdiet magna. Maecenas iaculis nibh vitae augue tempus, id accumsan metus venenatis. Maecenas facilisis in felis accumsan semper. Duis accumsan mattis orci ut congue.';
-    content: var(--tw-content);
-  }
-}
-#lorem-ipsum .ctc-head-text {
-  &::after {
-    --tw-content: 'Hello World!';
-    content: var(--tw-content);
-  }
 }
 .login-background {
   background-image: url('../assets/images/bg-login.png');

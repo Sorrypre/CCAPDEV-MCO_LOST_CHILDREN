@@ -21,19 +21,21 @@ if (collapsibles) {
 			if (e.target.hasAttribute('disabled'))
 				return;
 			e.target.setAttribute('disabled', '');
-			const nso = nextSiblingOf(e.target, '.collapsible-target');
-			if (!nso)
+			const nsot = nextSiblingOf(e.target.closest('.collapsible-header'), '.collapsible-target');
+			const nsoi = nextSiblingOf(e.target, '.collapsible-fold-icon');
+			if (!nsot)
 				return;
-			if (!nso.matches('.folded')) {
-				nso.style['height'] = nso.scrollHeight + 'px';
-				await sleep(200);
+			if (!nsot.matches('.folded')) {
+				nsot.style['height'] = nsot.scrollHeight + 'px';
+				await sleep(150);
 			}
-			nso.style['height'] = nso.matches('.folded') ? nso.scrollHeight + 'px' : '0';
-			nso.classList.toggle('folded');
-			nso.addEventListener('transitionend', function() {
-				if (!nso.matches('.folded'))
-					nso.style['height'] = 'auto';
+			nsot.style['height'] = nsot.matches('.folded') ? nsot.scrollHeight + 'px' : '0';
+			nsot.classList.toggle('folded');
+			nsot.addEventListener('transitionend', function() {
+				if (!nsot.matches('.folded'))
+					nsot.style['height'] = 'auto';
 			}, { once: true });
+			nsoi.classList.toggle('folded');
 			e.target.removeAttribute('disabled');
 		});
 	}

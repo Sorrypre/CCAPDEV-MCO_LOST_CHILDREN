@@ -46,6 +46,7 @@
 @import './DLSU-buildings.css';
 @import './settings.css';
 @import './collapse.css';
+@import './dialog.css';
 
 /* BACKGROUNDS */
 
@@ -106,7 +107,7 @@
 }
 
 .content-area {
-	@apply w-full h-full;
+	@apply relative w-full h-full;
 }
 
 .content {

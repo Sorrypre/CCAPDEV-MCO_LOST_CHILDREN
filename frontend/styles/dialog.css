@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+#dialog-test-content {
+	@apply h-full flex flex-col justify-center items-center;
+}
+
+.theme-hover-cyan {
+	@apply hover:text-cyan-800 hover:shadow-cyan-200 hover:text-shadow-white;
+}
+
+.theme-hover-red {
+	@apply hover:text-red-600 hover:shadow-orange-900 hover:text-shadow-black;
+}
+
+.dialog-show-button {
+	@apply p-6 bg-zinc-600 shadow-zinc-700 shadow-[0px_0px_0px_10px] rounded-3xl;
+	@apply select-none font-dmsans font-bold text-white text-5xl cursor-pointer;
+	@apply hover:bg-zinc-400;
+	@apply hover:shadow-[0px_0px_6px_12px];
+	@apply hover:text-shadow-md hover:text-shadow-[2px_2px_2px_7px];
+	@apply hover:brightness-130 hover:scale-110;
+	@apply active:scale-90;
+	@apply transition duration-250 ease-out;
+}
+
+.page-dialog {
+	@apply absolute z-10 flex flex-col;
+	@apply bg-zinc-600 shadow-zinc-700 rounded-4xl outline-2 outline-neutral-400;
+	@apply scale-100;
+	@apply transition duration-200;
+}
+
+.page-dialog.closed {
+	@apply scale-0;
+}
+
+.page-dialog-xbig {
+	@apply max-h-7/8 max-w-7/8 h-7/8 w-7/8;
+}
+
+.page-dialog-big {
+	@apply min-h-[600px] lg:min-h-3/5 min-w-[600px] max-w-[800px];
+}
+
+.page-dialog-typical {
+	@apply min-h-[250px] lg:min-h-1/4 min-w-[300px] max-w-[700px];
+}
+
+.page-dialog-header {
+	@apply flex justify-between items-center;
+	@apply pt-3 pb-2 pr-5 pl-5 bg-zinc-200 shadow-zinc-700 rounded-t-4xl;
+}
+
+.page-dialog-header-title {
+	@apply select-none font-grotesk font-bold text-black;
+}
+
+.page-dialog-typical .page-dialog-header-title {
+	@apply text-2xl;
+}
+
+.page-dialog-big .page-dialog-header-title {
+	@apply text-3xl;
+}
+
+.page-dialog-xbig .page-dialog-header-title {
+	@apply text-4xl;
+}
+
+.page-dialog-header-close {
+	@apply p-1 pl-2 pr-2 select-none font-inter font-medium text-black rounded-xl cursor-pointer;
+	@apply transition duration-250;
+	@apply hover:text-white hover:bg-black ease-in;
+	@apply active:scale-75;
+}
+
+.page-dialog-typical .page-dialog-header-close {
+	@apply text-xl;
+}
+
+.page-dialog-big .page-dialog-header-close {
+	@apply text-2xl;
+}
+
+.page-dialog-xbig .page-dialog-header-close {
+	@apply text-3xl;
+}
+
+.page-dialog-divider {
+	@apply w-full h-[4px] bg-neutral-400 rounded-md;
+}
+
+.page-dialog-content {
+	@apply flex flex-col;
+}
+
+.page-dialog-message {
+	@apply p-6 pb-0 h-full w-full flex gap-x-4;
+}
+
+.page-dialog-message-responses {
+	@apply p-5 flex justify-center;
+}
+
+.page-dialog-message-button {
+	@apply pl-4 pr-4 pt-2 pb-2;
+	@apply font-inter bg-white rounded-xl cursor-pointer;
+	@apply outline-2 outline-black;
+	@apply transition duration-400 ease-out;
+	@apply hover:bg-gray-200;
+	@apply active:scale-80;
+}
+
+.page-dialog-icon {
+	@apply w-1/2 h-1/2 max-w-[64px] max-h-[64px];
+}
